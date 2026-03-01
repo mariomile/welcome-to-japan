@@ -1,14 +1,10 @@
 import { useState } from "react";
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip,
-  ResponsiveContainer, PieChart, Pie, Cell, ScatterChart, Scatter,
-  RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Legend
-} from "recharts";
-import {
-  itineraryData, tasksData, stepChartData, budgetData, kyotoData, vibeData,
+  itineraryData, tasksData,
   type DayData
 } from "@/lib/itinerary-data";
-import { MapPin, Check } from "lucide-react";
+import { MapPin, Check, BarChart3 } from "lucide-react";
+import { Link } from "wouter";
 
 function getTagColor(tag: string) {
   if (["High Energy", "Adrenalina Pura", "Chiusura col Botto", "Tech & Culture"].includes(tag)) {
@@ -37,7 +33,10 @@ function Navbar() {
           </div>
           <div className="flex items-center space-x-6 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
             <button onClick={() => scrollTo("itinerary")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-sprint-log">Il Piano</button>
-            <button onClick={() => scrollTo("dashboard")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-data-viz">I Numeri</button>
+            <Link href="/stats" className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap inline-flex items-center gap-1.5" data-testid="nav-data-viz">
+              <BarChart3 className="w-3.5 h-3.5" />
+              I Numeri
+            </Link>
             <button onClick={() => scrollTo("checklist")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-sla">Checklist</button>
           </div>
         </div>
@@ -252,182 +251,6 @@ function ItinerarySection() {
   );
 }
 
-function StepChart() {
-  return (
-    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-step-chart-title">Quanti passi ci aspettano (RIP gambe)</h3>
-      <p className="text-sm text-slate-500 mb-6">Al giorno 9 tocchiamo i 35.000 passi. Portiamoci scarpe serie o piangiamo al terzo tempio.</p>
-      <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-steps">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={stepChartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="4 4" stroke="#F1F5F9" />
-            <XAxis dataKey="day" tick={{ fill: "#64748B", fontSize: 12, fontWeight: 600 }} axisLine={false} tickLine={false} />
-            <YAxis tick={{ fill: "#64748B", fontSize: 12 }} axisLine={false} tickLine={false} domain={[0, 40000]} />
-            <RechartsTooltip
-              contentStyle={{ borderRadius: "8px", border: "1px solid #E2E8F0", fontWeight: 600 }}
-              formatter={(value: number) => [`${value.toLocaleString()} passi`, "Passi"]}
-            />
-            <Line
-              type="monotone"
-              dataKey="steps"
-              stroke="#E11D48"
-              strokeWidth={3}
-              dot={{ fill: "#0F172A", r: 4 }}
-              activeDot={{ r: 6, fill: "#E11D48" }}
-              fill="rgba(225, 29, 72, 0.1)"
-            />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
-    </div>
-  );
-}
-
-function BudgetChart() {
-  return (
-    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-budget-chart-title">Dove finiscono i nostri soldi</h3>
-      <p className="text-sm text-slate-500 mb-6">Spoiler: soprattutto in cibo e uscite. Il portafoglio non sopravviverà, noi sì.</p>
-      <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-budget">
-        <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
-            <Pie
-              data={budgetData}
-              cx="50%"
-              cy="50%"
-              innerRadius="65%"
-              outerRadius="85%"
-              dataKey="value"
-              paddingAngle={2}
-              stroke="none"
-            >
-              {budgetData.map((entry, index) => (
-                <Cell key={index} fill={entry.color} />
-              ))}
-            </Pie>
-            <RechartsTooltip
-              contentStyle={{ borderRadius: "8px", border: "1px solid #E2E8F0", fontWeight: 600 }}
-              formatter={(value: number, name: string) => [`${value}%`, name]}
-            />
-            <Legend
-              verticalAlign="bottom"
-              iconSize={12}
-              wrapperStyle={{ fontSize: "12px", fontWeight: 700, paddingTop: "20px" }}
-            />
-          </PieChart>
-        </ResponsiveContainer>
-      </div>
-    </div>
-  );
-}
-
-function KyotoChart() {
-  return (
-    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-kyoto-chart-title">Dove andare a Kyoto senza turisti</h3>
-      <p className="text-sm text-slate-500 mb-6">Quanto &egrave; figo (Y) vs quanta gente c&apos;&egrave; (X). In alto a sinistra = posto da urlo senza folla. Obiettivo: stare l&igrave;.</p>
-      <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-kyoto">
-        <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
-            <CartesianGrid strokeDasharray="4 4" stroke="#F1F5F9" />
-            <XAxis
-              type="number"
-              dataKey="x"
-              domain={[0, 11]}
-              name="Quanta gente"
-              tick={{ fill: "#64748B", fontSize: 12 }}
-              axisLine={false}
-              tickLine={false}
-              label={{ value: "Quanta gente", position: "bottom", offset: 0, style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
-            />
-            <YAxis
-              type="number"
-              dataKey="y"
-              domain={[0, 11]}
-              name="Quanto è figo"
-              tick={{ fill: "#64748B", fontSize: 12 }}
-              axisLine={false}
-              tickLine={false}
-              label={{ value: "Quanto è figo", angle: -90, position: "insideLeft", style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
-            />
-            <RechartsTooltip
-              contentStyle={{ borderRadius: "8px", border: "1px solid #E2E8F0", fontWeight: 600 }}
-              formatter={(value: number, name: string) => [value, name]}
-              labelFormatter={() => ""}
-              content={({ active, payload }) => {
-                if (active && payload && payload.length) {
-                  const data = payload[0].payload;
-                  return (
-                    <div className="bg-white px-3 py-2 rounded-lg border border-slate-200 shadow-md">
-                      <p className="text-sm font-bold text-slate-900">{data.label}</p>
-                    </div>
-                  );
-                }
-                return null;
-              }}
-            />
-            <Scatter
-              data={kyotoData}
-              fill="#10B981"
-              stroke="#FFF"
-              strokeWidth={2}
-            />
-          </ScatterChart>
-        </ResponsiveContainer>
-      </div>
-    </div>
-  );
-}
-
-function VibeChart() {
-  return (
-    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-vibe-chart-title">Che tipo di viaggio sarà</h3>
-      <p className="text-sm text-slate-500 mb-6">Tanta roba da fare, tanta roba da mangiare, zero relax. Ce lo meritiamo. Il riposo è per i deboli.</p>
-      <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-vibe">
-        <ResponsiveContainer width="100%" height="100%">
-          <RadarChart data={vibeData} cx="50%" cy="50%" outerRadius="70%">
-            <PolarGrid stroke="#F1F5F9" />
-            <PolarAngleAxis
-              dataKey="category"
-              tick={{ fill: "#64748B", fontSize: 11, fontWeight: 700 }}
-            />
-            <PolarRadiusAxis
-              domain={[0, 10]}
-              tick={false}
-              axisLine={false}
-            />
-            <Radar
-              dataKey="value"
-              stroke="#E11D48"
-              fill="rgba(225, 29, 72, 0.15)"
-              strokeWidth={3}
-              dot={{ fill: "#0F172A", r: 4 }}
-            />
-          </RadarChart>
-        </ResponsiveContainer>
-      </div>
-    </div>
-  );
-}
-
-function DashboardSection() {
-  return (
-    <section id="dashboard" className="scroll-mt-24">
-      <div className="mb-10 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-dashboard-heading">I Numeri del Delirio</h2>
-        <p className="mt-2 text-slate-600 text-lg">Per non crepare a metà viaggio abbiamo fatto i conti. Al giorno 9 saremo distrutti, ma felici. Chi molla paga da bere a tutti.</p>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <StepChart />
-        <BudgetChart />
-        <KyotoChart />
-        <VibeChart />
-      </div>
-    </section>
-  );
-}
-
 function ChecklistSection() {
   const [tasks, setTasks] = useState(tasksData.map(t => ({ ...t, status: false })));
 
@@ -489,7 +312,6 @@ export default function Home() {
       <Hero />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
         <ItinerarySection />
-        <DashboardSection />
         <ChecklistSection />
       </main>
       <Footer />
