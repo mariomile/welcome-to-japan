@@ -11,7 +11,7 @@ function StepChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
       <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-step-chart-title">Quanti passi ci aspettano (RIP gambe)</h3>
-      <p className="text-sm text-slate-500 mb-6">Al giorno 9 tocchiamo i 35.000 passi. Portiamoci scarpe serie o piangiamo al terzo tempio.</p>
+      <p className="text-sm text-slate-500 mb-6">Al giorno 13 (USJ) tocchiamo i 32.000 passi. Portiamoci scarpe serie o piangiamo al terzo tempio.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-steps">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={stepChartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
@@ -195,7 +195,7 @@ export default function Stats() {
             I Numeri del <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Delirio</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-medium" data-testid="text-stats-subtitle">
-            Per non crepare a met&agrave; viaggio abbiamo fatto i conti. Al giorno 9 saremo distrutti, ma felici. Chi molla paga da bere a tutti.
+            Per non crepare a met&agrave; viaggio abbiamo fatto i conti. Al giorno 13 (USJ) saremo distrutti, ma felici. Chi molla paga da bere a tutti.
           </p>
         </div>
       </header>

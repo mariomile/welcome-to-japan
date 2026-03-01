@@ -7,11 +7,14 @@ import { MapPin, Check, BarChart3 } from "lucide-react";
 import { Link } from "wouter";
 
 function getTagColor(tag: string) {
-  if (["High Energy", "Adrenalina Pura", "Chiusura col Botto", "Tech & Culture"].includes(tag)) {
+  if (["Adrenalina Pura", "Gran Finale", "Escursione Must", "Impatto"].includes(tag)) {
     return "bg-[#E11D48] text-white shadow-md shadow-red-200";
   }
-  if (["Relax", "Premium", "Party & Lusso"].includes(tag)) {
+  if (["Esperienza Top", "Cibo & Neon", "Futuro & Cocktail", "Cultura Pura"].includes(tag)) {
     return "bg-[#10B981] text-white shadow-md shadow-emerald-200";
+  }
+  if (["Nerd & Omakase", "Cervi & Cocktail", "Shopping & Vibe", "Alba & Sake", "Bambù & Cultura", "Scelta Libera"].includes(tag)) {
+    return "bg-amber-500 text-white shadow-md shadow-amber-200";
   }
   return "bg-slate-100 text-slate-700";
 }
@@ -55,12 +58,12 @@ function Hero() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Massima Follia</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium" data-testid="text-hero-subtitle">
-          Prima volta in Giappone. 14 giorni. 3 amici. Non sappiamo una parola di giapponese, il budget lo abbiamo gi&agrave; sforato sulla carta e non ci frega niente. Mangiare tutto, camminare fino a morire, uscire ogni sera. Questo &egrave; il piano, non si discute.
+          19 Marzo &ndash; 1 Aprile 2026. Prima volta in Giappone. 14 giorni. 3 amici. Tokyo, Nikko, Hakone, Kyoto, Osaka. Il budget lo abbiamo gi&agrave; sforato sulla carta e non ci frega niente. Mangiare tutto, camminare fino a morire, uscire ogni sera. Chi molla paga da bere.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-stamina">&#x1F50B; Gambe d&apos;Acciaio</div>
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-hours">&#x23F1;&#xFE0F; 16 ore al giorno in piedi</div>
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-data">&#x1F4AA; Zero Improvvisazione</div>
+          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-stamina">{"\u26E9\uFE0F"} Mattina: must-see iconico</div>
+          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-hours">{"\u{1F37B}"} Sera: cocktail bar + nightlife</div>
+          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-data">{"\u{1F6BF}"} Reset hotel obbligatorio</div>
         </div>
       </div>
     </header>
@@ -202,7 +205,10 @@ function ItinerarySection() {
                 data-testid={`button-day-${d.day}`}
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span>Giorno {d.day}</span>
+                  <div>
+                    <span>Giorno {d.day}</span>
+                    <span className={`block text-[10px] font-medium mt-0.5 ${d.day === currentDay ? "text-slate-400" : "text-slate-400"}`}>{d.date}</span>
+                  </div>
                   {progress > 0 && (
                     <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
                       progress === 100
@@ -226,7 +232,7 @@ function ItinerarySection() {
                 {data.icon}
               </div>
               <div className="pt-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2 block" data-testid="text-day-location">{data.location}</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2 block" data-testid="text-day-location">{data.date} &bull; {data.location}</span>
                 <h3 className="text-3xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-4 tracking-tight" data-testid="text-day-title">{data.title}</h3>
                 <div className="flex items-center gap-3 flex-wrap">
                   <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ${getTagColor(data.tag)}`} data-testid="badge-day-tag">
