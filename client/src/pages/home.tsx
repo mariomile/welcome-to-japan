@@ -1,9 +1,9 @@
 import { useState } from "react";
 import {
-  itineraryData, tasksData,
+  itineraryData, tasksData, prepData, bonusExperiences,
   type DayData
 } from "@/lib/itinerary-data";
-import { MapPin, Check, BarChart3 } from "lucide-react";
+import { MapPin, Check, BarChart3, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 
 function getTagColor(tag: string) {
@@ -13,7 +13,7 @@ function getTagColor(tag: string) {
   if (["Esperienza Top", "Cibo & Neon", "Futuro & Cocktail", "Cultura Pura"].includes(tag)) {
     return "bg-[#10B981] text-white shadow-md shadow-emerald-200";
   }
-  if (["Nerd & Omakase", "Cervi & Cocktail", "Shopping & Vibe", "Alba & Sake", "Bambù & Cultura", "Scelta Libera"].includes(tag)) {
+  if (["Nerd & Omakase", "Cervi & Templi", "Shopping & Vibe", "Templi & Bar", "Scelta Libera", "Transizione", "Partenza"].includes(tag)) {
     return "bg-amber-500 text-white shadow-md shadow-amber-200";
   }
   return "bg-slate-100 text-slate-700";
@@ -35,7 +35,9 @@ function Navbar() {
             </span>
           </div>
           <div className="flex items-center space-x-6 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+            <button onClick={() => scrollTo("prep")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-prep">Prima di Partire</button>
             <button onClick={() => scrollTo("itinerary")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-sprint-log">Il Piano</button>
+            <button onClick={() => scrollTo("bonus")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-bonus">Esperienze</button>
             <Link href="/stats" className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap inline-flex items-center gap-1.5" data-testid="nav-data-viz">
               <BarChart3 className="w-3.5 h-3.5" />
               I Numeri
@@ -58,15 +60,64 @@ function Hero() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Massima Follia</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium" data-testid="text-hero-subtitle">
-          19 Marzo &ndash; 1 Aprile 2026. Prima volta in Giappone. 14 giorni. 3 amici. Tokyo, Nikko, Hakone, Kyoto, Osaka. Il budget lo abbiamo gi&agrave; sforato sulla carta e non ci frega niente. Mangiare tutto, camminare fino a morire, uscire ogni sera. Chi molla paga da bere.
+          19 Marzo &ndash; 1 Aprile 2026. 3 amici. 14 giorni. Tokyo &rarr; Nikko &rarr; Hakone &rarr; Kyoto &rarr; Hiroshima (opzionale) &rarr; Osaka &rarr; Nara. Il budget lo abbiamo gi&agrave; sforato sulla carta e non ci frega niente. Chi molla paga da bere.
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-stamina">{"\u26E9\uFE0F"} Mattina: must-see iconico</div>
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-hours">{"\u{1F37B}"} Sera: cocktail bar + nightlife</div>
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-data">{"\u{1F6BF}"} Reset hotel obbligatorio</div>
+        <div className="flex flex-wrap justify-center gap-3">
+          <div className="bg-slate-50 border border-slate-200 px-5 py-2 rounded-lg font-semibold text-slate-700 text-sm" data-testid="badge-stamina">{"\u26E9\uFE0F"} Templi &amp; cultura</div>
+          <div className="bg-slate-50 border border-slate-200 px-5 py-2 rounded-lg font-semibold text-slate-700 text-sm" data-testid="badge-hours">{"\u{1F37B}"} Cocktail bar top</div>
+          <div className="bg-slate-50 border border-slate-200 px-5 py-2 rounded-lg font-semibold text-slate-700 text-sm" data-testid="badge-data">{"\u{1F35C}"} Street food fino a crollare</div>
+          <div className="bg-slate-50 border border-slate-200 px-5 py-2 rounded-lg font-semibold text-slate-700 text-sm" data-testid="badge-budget">{"\u{1F4B0}"} ~2,850&ndash;4,200 EUR a testa</div>
         </div>
       </div>
     </header>
+  );
+}
+
+function PrepSection() {
+  const [activeTab, setActiveTab] = useState("trasporti");
+  const active = prepData.find(p => p.id === activeTab)!;
+
+  return (
+    <section id="prep" className="scroll-mt-24">
+      <div className="mb-8 border-b border-slate-200 pb-4">
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-prep-heading">Prima di Partire</h2>
+        <p className="mt-2 text-slate-600 text-lg">Tutto quello che dobbiamo sapere e preparare PRIMA di salire sull'aereo. Chi non legge questa sezione paga da bere.</p>
+      </div>
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+        <div className="flex overflow-x-auto border-b border-slate-200 bg-slate-50" style={{ scrollbarWidth: "none" }} data-testid="container-prep-tabs">
+          {prepData.map(cat => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveTab(cat.id)}
+              className={`flex-shrink-0 px-6 py-4 text-sm font-bold transition-all border-b-2 ${
+                cat.id === activeTab
+                  ? "border-[#E11D48] text-[#E11D48] bg-white"
+                  : "border-transparent text-slate-500 hover:text-slate-700"
+              }`}
+              data-testid={`tab-prep-${cat.id}`}
+            >
+              <span className="mr-2">{cat.icon}</span>
+              {cat.title}
+            </button>
+          ))}
+        </div>
+        <div className="p-6 md:p-8" data-testid="container-prep-content">
+          <div className="space-y-5">
+            {active.items.map((item, idx) => (
+              <div key={idx} className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-sm font-bold text-slate-500 mt-0.5">
+                  {idx + 1}
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-slate-900" data-testid={`text-prep-item-${activeTab}-${idx}`}>{item.title}</h4>
+                  <p className="text-sm text-slate-600 mt-1 leading-relaxed">{item.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -182,7 +233,7 @@ function ItinerarySection() {
     <section id="itinerary" className="scroll-mt-24">
       <div className="mb-8 border-b border-slate-200 pb-4">
         <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-itinerary-heading">Il Piano di Battaglia</h2>
-        <p className="mt-2 text-slate-600 text-lg">Giorno per giorno, ora per ora. Dove andare, cosa ordinare, dove bere. Ogni dettaglio per non fare figuracce e non perderci (troppo).</p>
+        <p className="mt-2 text-slate-600 text-lg">Giorno per giorno, ora per ora. Dove andare, cosa ordinare, dove bere, quanto spendere. Ogni dettaglio per non fare figuracce e non perderci (troppo).</p>
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 overflow-hidden flex flex-col lg:flex-row min-h-[800px]">
@@ -257,6 +308,84 @@ function ItinerarySection() {
   );
 }
 
+function BonusSection() {
+  const [expanded, setExpanded] = useState<number | null>(null);
+
+  return (
+    <section id="bonus" className="scroll-mt-24">
+      <div className="mb-8 border-b border-slate-200 pb-4">
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-bonus-heading">Esperienze Folli</h2>
+        <p className="mt-2 text-slate-600 text-lg">Opzionali ma consigliatissime. Le esperienze che trasformano un viaggio bello in un viaggio leggendario.</p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {bonusExperiences.map((exp, idx) => (
+          <div
+            key={idx}
+            className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+            data-testid={`card-bonus-${idx}`}
+          >
+            {exp.image && (
+              <img
+                src={exp.image}
+                alt={exp.title}
+                className="w-full h-40 object-cover"
+                loading="lazy"
+              />
+            )}
+            <div className="p-5">
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <h4 className="text-lg font-extrabold text-slate-900">{exp.title}</h4>
+                <span className="text-xs font-bold text-[#E11D48] bg-rose-50 px-2 py-1 rounded flex-shrink-0">{exp.location}</span>
+              </div>
+              <div className="flex gap-3 mb-3 text-xs text-slate-500 font-semibold">
+                <span>{exp.cost}</span>
+                <span>&bull;</span>
+                <span>{exp.duration}</span>
+              </div>
+              {expanded === idx ? (
+                <>
+                  <div
+                    className="text-sm text-slate-600 leading-relaxed mb-3 [&_b]:text-slate-900 [&_b]:font-bold [&_i]:text-[#E11D48] [&_i]:not-italic [&_i]:font-semibold"
+                    dangerouslySetInnerHTML={{ __html: exp.detail }}
+                  />
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={exp.maps}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E11D48] hover:text-rose-800 bg-rose-50 px-3 py-1.5 rounded-lg"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      Info
+                    </a>
+                    <button
+                      onClick={() => setExpanded(null)}
+                      className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-slate-700"
+                      data-testid={`button-collapse-bonus-${idx}`}
+                    >
+                      <ChevronUp className="w-3 h-3" />
+                      Chiudi
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <button
+                  onClick={() => setExpanded(idx)}
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#E11D48] hover:text-rose-800"
+                  data-testid={`button-expand-bonus-${idx}`}
+                >
+                  <ChevronDown className="w-3 h-3" />
+                  Dettagli
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ChecklistSection() {
   const [tasks, setTasks] = useState(tasksData.map(t => ({ ...t, status: false })));
 
@@ -267,8 +396,8 @@ function ChecklistSection() {
   return (
     <section id="checklist" className="scroll-mt-24 pb-20">
       <div className="mb-8 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-checklist-heading">Roba da fare PRIMA di partire</h2>
-        <p className="mt-2 text-slate-600 text-lg">Se non prenotiamo sta roba per tempo piangiamo in aeroporto. Chi non spunta tutto paga una penale in birre.</p>
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-checklist-heading">Roba da Prenotare</h2>
+        <p className="mt-2 text-slate-600 text-lg">Se non prenotiamo sta roba per tempo piangiamo in aeroporto. Solo le cose che contano davvero.</p>
       </div>
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <div className="divide-y divide-slate-100">
@@ -317,7 +446,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+        <PrepSection />
         <ItinerarySection />
+        <BonusSection />
         <ChecklistSection />
       </main>
       <Footer />
