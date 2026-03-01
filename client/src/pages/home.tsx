@@ -36,9 +36,9 @@ function Navbar() {
             </span>
           </div>
           <div className="flex items-center space-x-6 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
-            <button onClick={() => scrollTo("itinerary")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-sprint-log">Daily Sprint Log</button>
-            <button onClick={() => scrollTo("dashboard")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-data-viz">Data Viz</button>
-            <button onClick={() => scrollTo("checklist")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-sla">SLA Bookings</button>
+            <button onClick={() => scrollTo("itinerary")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-sprint-log">Il Piano</button>
+            <button onClick={() => scrollTo("dashboard")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-data-viz">I Numeri</button>
+            <button onClick={() => scrollTo("checklist")} className="text-sm font-semibold text-slate-600 hover:text-[#E11D48] transition-colors whitespace-nowrap" data-testid="nav-sla">Checklist</button>
           </div>
         </div>
       </div>
@@ -52,16 +52,16 @@ function Hero() {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E11D48] to-orange-400" />
       <div className="max-w-4xl mx-auto relative z-10">
         <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight" data-testid="text-hero-title">
-          Max Stamina <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Execution Plan</span>
+          Tre Amici, Zero Esperienza <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Massima Follia</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium" data-testid="text-hero-subtitle">
-          Interfacce caricate e ripulite. Nessuna distrazione visiva. Giornate saturate dalle 8 del mattino all&apos;1 di notte per 3 ragazzi con energia da vendere. Dettagli di esecuzione chirurgici per ogni location.
+          La nostra prima volta in Giappone. 14 giorni. 3 amici. Nessuno di noi sa il giapponese ma siamo pronti a mangiare tutto, camminare fino allo sfinimento e vivere ogni secondo come se non ci fosse un domani. Questo è il piano.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-stamina">&#x1F50B; High Stamina</div>
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-hours">&#x23F1;&#xFE0F; 16h/Day Active</div>
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-data">&#x1F3AF; Data-Driven</div>
+          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-stamina">&#x1F50B; Gambe d&apos;Acciaio</div>
+          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-hours">&#x23F1;&#xFE0F; 16 ore al giorno in piedi</div>
+          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-data">&#x1F3AF; Piano Anti-Improvvisazione</div>
         </div>
       </div>
     </header>
@@ -114,8 +114,8 @@ function ItinerarySection() {
   return (
     <section id="itinerary" className="scroll-mt-24">
       <div className="mb-8 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-itinerary-heading">Sprint Log (H24)</h2>
-        <p className="mt-2 text-slate-600 text-lg">Master-detail view. Ogni orario contiene indicazioni precise su logistica, ordini al ristorante e regole sociali giapponesi.</p>
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-itinerary-heading">Il Diario della Missione</h2>
+        <p className="mt-2 text-slate-600 text-lg">Giorno per giorno, ora per ora. Dove andare, cosa ordinare, come non fare figuracce. Ogni dettaglio che ci serve per non perderci (troppo).</p>
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 overflow-hidden flex flex-col lg:flex-row min-h-[800px]">
@@ -168,8 +168,8 @@ function ItinerarySection() {
 function StepChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-step-chart-title">Affaticamento Cumulativo</h3>
-      <p className="text-sm text-slate-500 mb-6">Previsione passi. Toccherete i 35k passi al Giorno 9. Preparare scarpe adeguate.</p>
+      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-step-chart-title">Quanti passi ci aspettano</h3>
+      <p className="text-sm text-slate-500 mb-6">Al giorno 9 toccheremo i 35.000 passi. Portatevi scarpe comode o piangerete.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-steps">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={stepChartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
@@ -199,8 +199,8 @@ function StepChart() {
 function BudgetChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-budget-chart-title">Allocazione Capitale (Post-Voli)</h3>
-      <p className="text-sm text-slate-500 mb-6">Ripartizione del budget giornaliero in Yen.</p>
+      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-budget-chart-title">Dove finiscono i nostri soldi</h3>
+      <p className="text-sm text-slate-500 mb-6">Spoiler: soprattutto in cibo. Ma ne vale ogni singolo Yen.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-budget">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
@@ -237,8 +237,8 @@ function BudgetChart() {
 function KyotoChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-kyoto-chart-title">Kyoto ROI Matrix</h3>
-      <p className="text-sm text-slate-500 mb-6">Impatto Visivo (Y) vs Densità Folla (X). Il quadrante in alto a sinistra è il target.</p>
+      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-kyoto-chart-title">Dove vale la pena andare a Kyoto</h3>
+      <p className="text-sm text-slate-500 mb-6">Quanto è bello (Y) vs quanta gente c&apos;è (X). In alto a sinistra = posto da sogno senza folla. Obiettivo: stare lì.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-kyoto">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
@@ -247,21 +247,21 @@ function KyotoChart() {
               type="number"
               dataKey="x"
               domain={[0, 11]}
-              name="ROI (Visivo vs Folla)"
+              name="Quanta gente c'è"
               tick={{ fill: "#64748B", fontSize: 12 }}
               axisLine={false}
               tickLine={false}
-              label={{ value: "ROI (Visivo vs Folla)", position: "bottom", offset: 0, style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
+              label={{ value: "Quanta gente c'è", position: "bottom", offset: 0, style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
             />
             <YAxis
               type="number"
               dataKey="y"
               domain={[0, 11]}
-              name="Impatto Estetico"
+              name="Quanto è bello"
               tick={{ fill: "#64748B", fontSize: 12 }}
               axisLine={false}
               tickLine={false}
-              label={{ value: "Impatto Estetico", angle: -90, position: "insideLeft", style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
+              label={{ value: "Quanto è bello", angle: -90, position: "insideLeft", style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
             />
             <RechartsTooltip
               contentStyle={{ borderRadius: "8px", border: "1px solid #E2E8F0", fontWeight: 600 }}
@@ -295,8 +295,8 @@ function KyotoChart() {
 function VibeChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-vibe-chart-title">Analisi del Vibe</h3>
-      <p className="text-sm text-slate-500 mb-6">Punteggi delle categorie per confermare l'allineamento con le aspettative del gruppo.</p>
+      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-vibe-chart-title">Che tipo di viaggio sarà</h3>
+      <p className="text-sm text-slate-500 mb-6">Tanta roba da fare, tanta roba da mangiare, un po&apos; meno relax. Ce lo meritiamo.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-vibe">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={vibeData} cx="50%" cy="50%" outerRadius="70%">
@@ -328,8 +328,8 @@ function DashboardSection() {
   return (
     <section id="dashboard" className="scroll-mt-24">
       <div className="mb-10 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-dashboard-heading">Health & Strategy Dashboard</h2>
-        <p className="mt-2 text-slate-600 text-lg">In un piano "Max Stamina", monitorare i colli di bottiglia fisici è vitale per evitare il burnout a metà viaggio.</p>
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-dashboard-heading">I Numeri della Nostra Follia</h2>
+        <p className="mt-2 text-slate-600 text-lg">Per non crollare a metà viaggio, abbiamo fatto i conti. Spoiler: al giorno 9 saremo distrutti, ma felici.</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <StepChart />
@@ -351,8 +351,8 @@ function ChecklistSection() {
   return (
     <section id="checklist" className="scroll-mt-24 pb-20">
       <div className="mb-8 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-checklist-heading">SLA & Pre-Departure Ops</h2>
-        <p className="mt-2 text-slate-600 text-lg">Il setup d'ambiente da completare prima di atterrare in Giappone per azzerare le code.</p>
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-checklist-heading">Cose da fare PRIMA di partire</h2>
+        <p className="mt-2 text-slate-600 text-lg">Se non prenotiamo queste cose per tempo, piangeremo in aeroporto. Fidateci, spuntiamo tutto.</p>
       </div>
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <div className="divide-y divide-slate-100">
@@ -390,7 +390,7 @@ function ChecklistSection() {
 function Footer() {
   return (
     <footer className="bg-slate-900 py-12 text-center" data-testid="footer">
-      <p className="text-slate-400 font-medium">Generato per Mario &bull; Product Builder &bull; Max Stamina Edition 2026</p>
+      <p className="text-slate-400 font-medium">Fatto con amore e ansia pre-partenza &bull; Primo viaggio in Giappone &bull; 2026</p>
     </footer>
   );
 }
