@@ -52,16 +52,16 @@ function Hero() {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E11D48] to-orange-400" />
       <div className="max-w-4xl mx-auto relative z-10">
         <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tight" data-testid="text-hero-title">
-          Tre Amici, Zero Esperienza <br />
+          Tre Uomini, Zero Esperienza <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Massima Follia</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed font-medium" data-testid="text-hero-subtitle">
-          La nostra prima volta in Giappone. 14 giorni. 3 amici. Nessuno di noi sa il giapponese ma siamo pronti a mangiare tutto, camminare fino allo sfinimento e vivere ogni secondo come se non ci fosse un domani. Questo è il piano.
+          Prima volta in Giappone. 14 giorni. 3 amici. Non sappiamo una parola di giapponese, il budget lo abbiamo gi&agrave; sforato sulla carta e non ci frega niente. Mangiare tutto, camminare fino a morire, uscire ogni sera. Questo &egrave; il piano, non si discute.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-stamina">&#x1F50B; Gambe d&apos;Acciaio</div>
           <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-hours">&#x23F1;&#xFE0F; 16 ore al giorno in piedi</div>
-          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-data">&#x1F3AF; Piano Anti-Improvvisazione</div>
+          <div className="bg-slate-50 border border-slate-200 px-6 py-2 rounded-lg font-semibold text-slate-700" data-testid="badge-data">&#x1F4AA; Zero Improvvisazione</div>
         </div>
       </div>
     </header>
@@ -114,8 +114,8 @@ function ItinerarySection() {
   return (
     <section id="itinerary" className="scroll-mt-24">
       <div className="mb-8 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-itinerary-heading">Il Diario della Missione</h2>
-        <p className="mt-2 text-slate-600 text-lg">Giorno per giorno, ora per ora. Dove andare, cosa ordinare, come non fare figuracce. Ogni dettaglio che ci serve per non perderci (troppo).</p>
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-itinerary-heading">Il Piano di Battaglia</h2>
+        <p className="mt-2 text-slate-600 text-lg">Giorno per giorno, ora per ora. Dove andare, cosa ordinare, dove bere. Ogni dettaglio per non fare figuracce e non perderci (troppo).</p>
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 overflow-hidden flex flex-col lg:flex-row min-h-[800px]">
@@ -168,8 +168,8 @@ function ItinerarySection() {
 function StepChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-step-chart-title">Quanti passi ci aspettano</h3>
-      <p className="text-sm text-slate-500 mb-6">Al giorno 9 toccheremo i 35.000 passi. Portatevi scarpe comode o piangerete.</p>
+      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-step-chart-title">Quanti passi ci aspettano (RIP gambe)</h3>
+      <p className="text-sm text-slate-500 mb-6">Al giorno 9 tocchiamo i 35.000 passi. Portiamoci scarpe serie o piangiamo al terzo tempio.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-steps">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={stepChartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
@@ -200,7 +200,7 @@ function BudgetChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
       <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-budget-chart-title">Dove finiscono i nostri soldi</h3>
-      <p className="text-sm text-slate-500 mb-6">Spoiler: soprattutto in cibo. Ma ne vale ogni singolo Yen.</p>
+      <p className="text-sm text-slate-500 mb-6">Spoiler: soprattutto in cibo e uscite. Il portafoglio non sopravviverà, noi sì.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-budget">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
@@ -237,8 +237,8 @@ function BudgetChart() {
 function KyotoChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-kyoto-chart-title">Dove vale la pena andare a Kyoto</h3>
-      <p className="text-sm text-slate-500 mb-6">Quanto è bello (Y) vs quanta gente c&apos;è (X). In alto a sinistra = posto da sogno senza folla. Obiettivo: stare lì.</p>
+      <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-kyoto-chart-title">Dove andare a Kyoto senza turisti</h3>
+      <p className="text-sm text-slate-500 mb-6">Quanto &egrave; figo (Y) vs quanta gente c&apos;&egrave; (X). In alto a sinistra = posto da urlo senza folla. Obiettivo: stare l&igrave;.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-kyoto">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 10 }}>
@@ -247,21 +247,21 @@ function KyotoChart() {
               type="number"
               dataKey="x"
               domain={[0, 11]}
-              name="Quanta gente c'è"
+              name="Quanta gente"
               tick={{ fill: "#64748B", fontSize: 12 }}
               axisLine={false}
               tickLine={false}
-              label={{ value: "Quanta gente c'è", position: "bottom", offset: 0, style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
+              label={{ value: "Quanta gente", position: "bottom", offset: 0, style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
             />
             <YAxis
               type="number"
               dataKey="y"
               domain={[0, 11]}
-              name="Quanto è bello"
+              name="Quanto è figo"
               tick={{ fill: "#64748B", fontSize: 12 }}
               axisLine={false}
               tickLine={false}
-              label={{ value: "Quanto è bello", angle: -90, position: "insideLeft", style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
+              label={{ value: "Quanto è figo", angle: -90, position: "insideLeft", style: { fontWeight: 700, fill: "#64748B", fontSize: 12 } }}
             />
             <RechartsTooltip
               contentStyle={{ borderRadius: "8px", border: "1px solid #E2E8F0", fontWeight: 600 }}
@@ -296,7 +296,7 @@ function VibeChart() {
   return (
     <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
       <h3 className="text-xl font-bold text-slate-900 mb-1" data-testid="text-vibe-chart-title">Che tipo di viaggio sarà</h3>
-      <p className="text-sm text-slate-500 mb-6">Tanta roba da fare, tanta roba da mangiare, un po&apos; meno relax. Ce lo meritiamo.</p>
+      <p className="text-sm text-slate-500 mb-6">Tanta roba da fare, tanta roba da mangiare, zero relax. Ce lo meritiamo. Il riposo è per i deboli.</p>
       <div className="w-full h-[350px] max-h-[400px]" data-testid="chart-vibe">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={vibeData} cx="50%" cy="50%" outerRadius="70%">
@@ -328,8 +328,8 @@ function DashboardSection() {
   return (
     <section id="dashboard" className="scroll-mt-24">
       <div className="mb-10 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-dashboard-heading">I Numeri della Nostra Follia</h2>
-        <p className="mt-2 text-slate-600 text-lg">Per non crollare a metà viaggio, abbiamo fatto i conti. Spoiler: al giorno 9 saremo distrutti, ma felici.</p>
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-dashboard-heading">I Numeri del Delirio</h2>
+        <p className="mt-2 text-slate-600 text-lg">Per non crepare a metà viaggio abbiamo fatto i conti. Al giorno 9 saremo distrutti, ma felici. Chi molla paga da bere a tutti.</p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <StepChart />
@@ -351,8 +351,8 @@ function ChecklistSection() {
   return (
     <section id="checklist" className="scroll-mt-24 pb-20">
       <div className="mb-8 border-b border-slate-200 pb-4">
-        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-checklist-heading">Cose da fare PRIMA di partire</h2>
-        <p className="mt-2 text-slate-600 text-lg">Se non prenotiamo queste cose per tempo, piangeremo in aeroporto. Fidateci, spuntiamo tutto.</p>
+        <h2 className="text-3xl font-extrabold text-slate-900" data-testid="text-checklist-heading">Roba da fare PRIMA di partire</h2>
+        <p className="mt-2 text-slate-600 text-lg">Se non prenotiamo sta roba per tempo piangiamo in aeroporto. Chi non spunta tutto paga una penale in birre.</p>
       </div>
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <div className="divide-y divide-slate-100">
@@ -390,7 +390,7 @@ function ChecklistSection() {
 function Footer() {
   return (
     <footer className="bg-slate-900 py-12 text-center" data-testid="footer">
-      <p className="text-slate-400 font-medium">Fatto con amore e ansia pre-partenza &bull; Primo viaggio in Giappone &bull; 2026</p>
+      <p className="text-slate-400 font-medium">Fatto con birre, ansia e troppo tempo libero &bull; Tre maschi in Giappone &bull; 2026</p>
     </footer>
   );
 }

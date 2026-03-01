@@ -1,7 +1,7 @@
-# Giappone 2026: Tre Amici, Massima Follia
+# Giappone 2026: Tre Uomini, Massima Follia
 
 ## Overview
-A single-page React application serving as a detailed 14-day Japan travel itinerary planner. Written entirely in casual Italian from the perspective of three friends on their first trip to Japan together (first-person plural: noi/ci).
+A single-page React application serving as a detailed 14-day Japan travel itinerary planner. Written entirely in irreverent Italian from the perspective of three male friends on their first trip to Japan together (first-person plural: noi/ci). Tone is ironic, no-filter, guys-trip energy.
 
 ## Architecture
 - **Frontend-only**: No backend API needed. All data is static/hardcoded.
@@ -9,7 +9,7 @@ A single-page React application serving as a detailed 14-day Japan travel itiner
 - **Charts**: Recharts (LineChart, PieChart, ScatterChart, RadarChart)
 - **Routing**: Wouter (single page at `/`)
 - **Font**: Plus Jakarta Sans
-- **Language**: Italian (casual, personal tone)
+- **Language**: Italian (irreverent, direct, masculine humor)
 
 ## Key Files
 - `client/src/pages/home.tsx` - Main page with all sections (Nav, Hero, Itinerary, Dashboard, Checklist, Footer)
@@ -19,11 +19,11 @@ A single-page React application serving as a detailed 14-day Japan travel itiner
 
 ## Sections
 1. **Sticky Navbar** - "Project Japan" logo with smooth scroll navigation (Il Piano, I Numeri, Checklist)
-2. **Hero Header** - "Tre Amici, Zero Esperienza / Massima Follia" with gradient accent and feature badges
-3. **Il Piano (Itinerary)** - Master-detail: day selector on left, timeline on right with Google Maps links
-4. **I Numeri (Dashboard)** - 4 charts: Steps forecast, Budget allocation, Kyoto spots matrix, Vibe analysis
+2. **Hero Header** - "Tre Uomini, Zero Esperienza / Massima Follia" with gradient accent and feature badges
+3. **Il Piano di Battaglia (Itinerary)** - Master-detail: day selector on left, timeline on right with Google Maps links
+4. **I Numeri del Delirio (Dashboard)** - 4 charts: Steps forecast, Budget allocation, Kyoto spots matrix, Vibe analysis
 5. **Checklist** - 8 toggleable pre-departure tasks with completion state
-6. **Footer** - "Fatto con amore e ansia pre-partenza"
+6. **Footer** - "Fatto con birre, ansia e troppo tempo libero"
 
 ## Design
 - Slate color palette with Japan Red (#E11D48) accent
@@ -32,7 +32,8 @@ A single-page React application serving as a detailed 14-day Japan travel itiner
 - Emojis used intentionally throughout (per original design)
 
 ## Copy Style
-- All Italian, casual/fun tone
+- All Italian, irreverent tone, no-filter humor
 - First-person plural (noi/ci) throughout - never voi/vi/tu
-- Told from perspective of three friends planning together
+- Told from perspective of three male friends, guys-trip energy
+- Bets/penalties in beers as running joke throughout
 - dangerouslySetInnerHTML used for timeline details (static HTML: b, i, br tags)
