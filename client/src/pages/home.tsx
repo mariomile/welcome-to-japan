@@ -8,7 +8,7 @@ import {
   itineraryData, tasksData, stepChartData, budgetData, kyotoData, vibeData,
   type DayData
 } from "@/lib/itinerary-data";
-import { MapPin } from "lucide-react";
+import { MapPin, Check } from "lucide-react";
 
 function getTagColor(tag: string) {
   if (["High Energy", "Adrenalina Pura", "Chiusura col Botto", "Tech & Culture"].includes(tag)) {
@@ -68,41 +68,97 @@ function Hero() {
   );
 }
 
-function TimelineView({ data }: { data: DayData }) {
+function useCheckedItems() {
+  const [checked, setChecked] = useState<Record<string, boolean>>(() => {
+    try {
+      const stored = localStorage.getItem("japan-checked");
+      return stored ? JSON.parse(stored) : {};
+    } catch { return {}; }
+  });
+  const toggle = (key: string) => {
+    setChecked(prev => {
+      const next = { ...prev, [key]: !prev[key] };
+      localStorage.setItem("japan-checked", JSON.stringify(next));
+      return next;
+    });
+  };
+  return { checked, toggle };
+}
+
+function TimelineView({ data, checked, onToggle }: { data: DayData; checked: Record<string, boolean>; onToggle: (key: string) => void }) {
   return (
     <div className="relative pl-10 mt-6">
       <div className="absolute top-0 bottom-0 left-[10px] w-0.5 bg-slate-200" />
-      {data.timeline.map((item, idx) => (
-        <div key={idx} className="relative mb-14">
-          <div
-            className="absolute left-[-2.5rem] top-[6px] w-4 h-4 rounded-full bg-[#E11D48] border-[3px] border-[#F8FAFC] z-10"
-            style={{ boxShadow: "0 0 0 2px #E11D48" }}
-          />
-          <span className="inline-block px-3 py-1 bg-slate-800 text-white text-xs font-bold rounded-lg mb-2 shadow-sm tracking-wide" data-testid={`badge-time-${idx}`}>
-            {item.time}
-          </span>
-          <h4 className="text-xl font-extrabold text-slate-900 leading-tight mb-2" data-testid={`text-timeline-title-${idx}`}>
-            {item.title}
-          </h4>
-          <div
-            className="text-base text-slate-600 mb-2 leading-relaxed [&_b]:text-slate-900 [&_b]:font-bold [&_i]:text-[#E11D48] [&_i]:not-italic [&_i]:font-semibold"
-            dangerouslySetInnerHTML={{ __html: item.detail }}
-            data-testid={`text-timeline-detail-${idx}`}
-          />
-          {item.maps && (
-            <a
-              href={item.maps}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-xs font-bold text-[#E11D48] hover:text-rose-800 transition-colors bg-rose-50 px-3 py-1.5 rounded-lg mt-4"
-              data-testid={`link-maps-${idx}`}
-            >
-              <MapPin className="w-3 h-3" />
-              <span>Naviga su Google Maps</span>
-            </a>
-          )}
-        </div>
-      ))}
+      {data.timeline.map((item, idx) => {
+        const key = `d${data.day}-${idx}`;
+        const isDone = !!checked[key];
+        return (
+          <div key={idx} className={`relative mb-14 transition-opacity ${isDone ? "opacity-60" : ""}`}>
+            <div
+              className={`absolute left-[-2.5rem] top-[6px] w-4 h-4 rounded-full border-[3px] border-[#F8FAFC] z-10 ${isDone ? "bg-[#10B981]" : "bg-[#E11D48]"}`}
+              style={{ boxShadow: `0 0 0 2px ${isDone ? "#10B981" : "#E11D48"}` }}
+            />
+            <div className="flex items-start justify-between gap-3 mb-2">
+              <div className="flex items-center gap-3 flex-wrap">
+                <span className="inline-block px-3 py-1 bg-slate-800 text-white text-xs font-bold rounded-lg shadow-sm tracking-wide" data-testid={`badge-time-${idx}`}>
+                  {item.time}
+                </span>
+                {isDone && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-md">
+                    <Check className="w-3 h-3" /> Fatto
+                  </span>
+                )}
+              </div>
+              <button
+                onClick={() => onToggle(key)}
+                role="checkbox"
+                aria-checked={isDone}
+                aria-label={`${item.title} - ${isDone ? "completato" : "da fare"}`}
+                className={`flex-shrink-0 w-7 h-7 rounded-lg border-2 flex items-center justify-center transition-all ${
+                  isDone
+                    ? "bg-[#10B981] border-[#10B981] text-white"
+                    : "border-slate-300 text-transparent hover:border-slate-400"
+                }`}
+                data-testid={`check-activity-${data.day}-${idx}`}
+                title={isDone ? "Segna come non fatto" : "Segna come fatto"}
+              >
+                <Check className="w-4 h-4" />
+              </button>
+            </div>
+            <h4 className={`text-xl font-extrabold leading-tight mb-2 ${isDone ? "text-slate-500 line-through" : "text-slate-900"}`} data-testid={`text-timeline-title-${idx}`}>
+              {item.title}
+            </h4>
+            {item.image && (
+              <div className="mb-4 rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-48 md:h-56 object-cover"
+                  loading="lazy"
+                  data-testid={`img-activity-${data.day}-${idx}`}
+                />
+              </div>
+            )}
+            <div
+              className="text-base text-slate-600 mb-2 leading-relaxed [&_b]:text-slate-900 [&_b]:font-bold [&_i]:text-[#E11D48] [&_i]:not-italic [&_i]:font-semibold"
+              dangerouslySetInnerHTML={{ __html: item.detail }}
+              data-testid={`text-timeline-detail-${idx}`}
+            />
+            {item.maps && (
+              <a
+                href={item.maps}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-xs font-bold text-[#E11D48] hover:text-rose-800 transition-colors bg-rose-50 px-3 py-1.5 rounded-lg mt-4"
+                data-testid={`link-maps-${idx}`}
+              >
+                <MapPin className="w-3 h-3" />
+                <span>Naviga su Google Maps</span>
+              </a>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -110,6 +166,15 @@ function TimelineView({ data }: { data: DayData }) {
 function ItinerarySection() {
   const [currentDay, setCurrentDay] = useState(1);
   const data = itineraryData.find(d => d.day === currentDay)!;
+  const { checked, toggle } = useCheckedItems();
+
+  const getDayProgress = (day: number) => {
+    const dayData = itineraryData.find(d => d.day === day);
+    if (!dayData || dayData.timeline.length === 0) return 0;
+    const total = dayData.timeline.length;
+    const done = dayData.timeline.filter((_, i) => checked[`d${day}-${i}`]).length;
+    return Math.round((done / total) * 100);
+  };
 
   return (
     <section id="itinerary" className="scroll-mt-24">
@@ -124,21 +189,35 @@ function ItinerarySection() {
           style={{ scrollbarWidth: "none" }}
           data-testid="container-day-selector"
         >
-          {itineraryData.map(d => (
-            <button
-              key={d.day}
-              onClick={() => setCurrentDay(d.day)}
-              className={`text-left lg:text-center flex-shrink-0 px-5 py-4 lg:py-3 rounded-xl border text-sm font-bold transition-all ${
-                d.day === currentDay
-                  ? "bg-slate-900 text-white border-slate-900 shadow-md"
-                  : "border-slate-200 text-slate-500 hover:border-slate-300"
-              }`}
-              data-testid={`button-day-${d.day}`}
-            >
-              Giorno {d.day}
-              <span className="block lg:hidden text-xs font-normal opacity-70 mt-1">{d.title}</span>
-            </button>
-          ))}
+          {itineraryData.map(d => {
+            const progress = getDayProgress(d.day);
+            return (
+              <button
+                key={d.day}
+                onClick={() => setCurrentDay(d.day)}
+                className={`text-left lg:text-center flex-shrink-0 px-5 py-4 lg:py-3 rounded-xl border text-sm font-bold transition-all relative overflow-hidden ${
+                  d.day === currentDay
+                    ? "bg-slate-900 text-white border-slate-900 shadow-md"
+                    : "border-slate-200 text-slate-500 hover:border-slate-300"
+                }`}
+                data-testid={`button-day-${d.day}`}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span>Giorno {d.day}</span>
+                  {progress > 0 && (
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                      progress === 100
+                        ? "bg-emerald-500 text-white"
+                        : d.day === currentDay ? "bg-white/20 text-white" : "bg-slate-200 text-slate-600"
+                    }`} data-testid={`badge-progress-${d.day}`}>
+                      {progress === 100 ? "\u2713" : `${progress}%`}
+                    </span>
+                  )}
+                </div>
+                <span className="block lg:hidden text-xs font-normal opacity-70 mt-1">{d.title}</span>
+              </button>
+            );
+          })}
         </div>
 
         <div className="lg:w-3/4 p-6 md:p-10 relative bg-white" data-testid="container-day-content">
@@ -150,13 +229,21 @@ function ItinerarySection() {
               <div className="pt-2">
                 <span className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2 block" data-testid="text-day-location">{data.location}</span>
                 <h3 className="text-3xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-4 tracking-tight" data-testid="text-day-title">{data.title}</h3>
-                <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ${getTagColor(data.tag)}`} data-testid="badge-day-tag">
-                  {data.tag}
-                </span>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ${getTagColor(data.tag)}`} data-testid="badge-day-tag">
+                    {data.tag}
+                  </span>
+                  {getDayProgress(currentDay) > 0 && (
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700" data-testid="badge-day-progress">
+                      <Check className="w-3 h-3" />
+                      {data.timeline.filter((_, i) => checked[`d${currentDay}-${i}`]).length}/{data.timeline.length} completati
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
             <div className="flex-grow overflow-y-auto lg:pr-8 pb-10" style={{ scrollbarWidth: "none" }}>
-              <TimelineView data={data} />
+              <TimelineView data={data} checked={checked} onToggle={toggle} />
             </div>
           </div>
         </div>
