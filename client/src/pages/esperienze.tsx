@@ -2,6 +2,7 @@ import { useState } from "react";
 import { bonusExperiences } from "@/lib/itinerary-data";
 import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import Layout from "@/components/layout";
+import { SafeHtml } from "@/components/safe-html";
 
 export default function Esperienze() {
   const [expanded, setExpanded] = useState<number | null>(null);
@@ -43,9 +44,9 @@ export default function Esperienze() {
 
               {expanded === idx ? (
                 <>
-                  <div
+                  <SafeHtml
+                    html={exp.detail}
                     className="text-sm text-slate-600 leading-relaxed mb-3 [&_b]:text-slate-900 [&_b]:font-bold [&_i]:text-[#E11D48] [&_i]:not-italic [&_i]:font-semibold"
-                    dangerouslySetInnerHTML={{ __html: exp.detail }}
                   />
                   <div className="flex items-center gap-3">
                     <a

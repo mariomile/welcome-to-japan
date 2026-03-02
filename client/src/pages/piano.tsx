@@ -2,6 +2,7 @@ import { useState } from "react";
 import { itineraryData, type DayData } from "@/lib/itinerary-data";
 import { MapPin, Check } from "lucide-react";
 import Layout from "@/components/layout";
+import { SafeHtml } from "@/components/safe-html";
 
 function getTagColor(tag: string) {
   if (["Adrenalina Pura", "Gran Finale", "Escursione Must", "Impatto"].includes(tag)) {
@@ -16,11 +17,22 @@ function getTagColor(tag: string) {
   return "bg-slate-100 text-slate-700";
 }
 
+function isCheckedRecord(value: unknown): value is Record<string, boolean> {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    !Array.isArray(value) &&
+    Object.values(value).every((v) => typeof v === "boolean")
+  );
+}
+
 function useCheckedItems() {
   const [checked, setChecked] = useState<Record<string, boolean>>(() => {
     try {
       const stored = localStorage.getItem("japan-checked");
-      return stored ? JSON.parse(stored) : {};
+      if (!stored) return {};
+      const parsed: unknown = JSON.parse(stored);
+      return isCheckedRecord(parsed) ? parsed : {};
     } catch { return {}; }
   });
   const toggle = (key: string) => {
@@ -84,9 +96,9 @@ function TimelineView({ data, checked, onToggle }: { data: DayData; checked: Rec
                 />
               </div>
             )}
-            <div
+            <SafeHtml
+              html={item.detail}
               className="text-sm text-slate-600 leading-relaxed [&_b]:text-slate-900 [&_b]:font-bold [&_i]:text-[#E11D48] [&_i]:not-italic [&_i]:font-semibold"
-              dangerouslySetInnerHTML={{ __html: item.detail }}
               data-testid={`text-timeline-detail-${idx}`}
             />
             {item.maps && (
