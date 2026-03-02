@@ -17,8 +17,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#E11D48] to-orange-400" />
         <div className="max-w-2xl mx-auto relative z-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight" data-testid="text-hero-title">
-            Tre Uomini, Zero Esperienza<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Massima Follia</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E11D48] to-rose-500">Japponata!</span>
           </h1>
           <p className="text-base sm:text-lg text-slate-600 mb-6 max-w-xl mx-auto leading-relaxed font-medium" data-testid="text-hero-subtitle">
             19 Mar &ndash; 1 Apr 2026 &bull; 3 amici &bull; 14 giorni<br />
@@ -33,7 +32,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-2xl mx-auto px-4 py-6 pb-24 space-y-3">
+      <main className="max-w-2xl mx-auto px-4 py-6 pb-24 space-y-4">
         {sections.map(s => {
           const Icon = s.icon;
           return (
