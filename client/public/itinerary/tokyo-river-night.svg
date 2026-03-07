@@ -1,0 +1,17 @@
+<svg width="1600" height="800" viewBox="0 0 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="800" fill="#0F172A"/>
+  <rect y="520" width="1600" height="280" fill="#111827"/>
+  <circle cx="1280" cy="145" r="68" fill="#F8FAFC" fill-opacity="0.95"/>
+  <path d="M0 520C168 480 284 454 412 454C557 454 626 510 792 510C954 510 1017 462 1188 462C1333 462 1453 490 1600 520V800H0V520Z" fill="#1D4ED8" fill-opacity="0.24"/>
+  <path d="M0 585C189 621 325 632 454 632C604 632 692 588 832 588C991 588 1078 645 1224 645C1351 645 1465 620 1600 590V800H0V585Z" fill="#E11D48" fill-opacity="0.18"/>
+  <rect x="124" y="242" width="56" height="278" rx="8" fill="#1F2937"/>
+  <rect x="196" y="194" width="92" height="326" rx="8" fill="#334155"/>
+  <rect x="306" y="152" width="70" height="368" rx="8" fill="#1F2937"/>
+  <rect x="392" y="268" width="48" height="252" rx="8" fill="#334155"/>
+  <rect x="452" y="220" width="94" height="300" rx="8" fill="#1F2937"/>
+  <rect x="1218" y="166" width="22" height="354" rx="10" fill="#F97316"/>
+  <rect x="1200" y="144" width="58" height="30" rx="14" fill="#F59E0B"/>
+  <path d="M1228 180V520" stroke="#FDBA74" stroke-width="6" stroke-linecap="round"/>
+  <text x="120" y="660" fill="#F8FAFC" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="700">Passeggiata Sumida River</text>
+  <text x="120" y="716" fill="#CBD5E1" font-family="'Space Mono', monospace" font-size="24" letter-spacing="3">Tokyo skyline • ponteggi di luce • primo respiro</text>
+</svg>

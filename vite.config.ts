@@ -18,7 +18,25 @@ export default defineConfig({
         theme_color: "#E11D48",
         background_color: "#0f172a",
         display: "standalone",
+        orientation: "portrait",
+        scope: "/",
+        start_url: "/",
         lang: "it",
+        categories: ["travel", "lifestyle", "navigation"],
+        shortcuts: [
+          {
+            name: "Apri il piano",
+            short_name: "Piano",
+            url: "/piano",
+            icons: [{ src: "pwa-192x192.png", sizes: "192x192", type: "image/png" }],
+          },
+          {
+            name: "Apri checklist",
+            short_name: "Check",
+            url: "/checklist",
+            icons: [{ src: "pwa-192x192.png", sizes: "192x192", type: "image/png" }],
+          },
+        ],
         icons: [
           { src: "pwa-192x192.png", sizes: "192x192", type: "image/png" },
           { src: "pwa-512x512.png", sizes: "512x512", type: "image/png" },
@@ -42,6 +60,15 @@ export default defineConfig({
             urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/i,
             handler: "CacheFirst",
             options: { cacheName: "images", expiration: { maxEntries: 60, maxAgeSeconds: 60 * 60 * 24 * 30 }, cacheableResponse: { statuses: [0, 200] } },
+          },
+          {
+            urlPattern: /^https:\/\/images\.unsplash\.com\/.*/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "unsplash-images",
+              expiration: { maxEntries: 80, maxAgeSeconds: 60 * 60 * 24 * 30 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
           },
         ],
       },

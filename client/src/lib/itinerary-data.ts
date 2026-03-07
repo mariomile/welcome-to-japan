@@ -55,11 +55,11 @@ export const itineraryData: DayData[] = [
       { time: "17:00", title: "Passeggiata Sumida River",
         detail: "Usciamo da Senso-ji e camminiamo lungo il fiume Sumida verso sud. Lo skyline con la <b>Tokyo Skytree</b> che domina tutto. Questa passeggiata serve per smaltire il jet lag camminando, fare foto incredibili con la luce del tardo pomeriggio e iniziare a sentire il ritmo della città.<br><br><b>Pro tip:</b> Attraversiamo il <b>Sumida Park</b> — a fine marzo potremmo trovare i primi sakura (fiori di ciliegio) lungo il fiume.",
         maps: "https://www.google.com/maps/search/?api=1&query=Sumida+River+Walk",
-        image: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800&h=400&fit=crop" },
+        image: "/itinerary/tokyo-river-night.svg" },
       { time: "20:00", title: "Omoide Yokocho + Golden Gai: la prima sera vera",
         detail: "<b>Omoide Yokocho (Memory Lane / Piss Alley)</b> — Un labirinto di micro-ristoranti all'aperto, ciascuno con 6-8 posti, fumo alla griglia, lanterne rosse. È il Giappone crudo, autentico, da film.<br><br>Ci sediamo in uno con lo <i>yakitori</i>. Ordiniamo: <i>negima</i> (pollo e cipollotto), <i>tsukune</i> (polpetta), <i>kawa</i> (pelle croccante), <i>sunagimo</i> (ventriglio — fidiamoci). 4-5 spiedini a testa (~150-200 yen l'uno) + <i>nama biiru</i> (birra alla spina, ~500 yen). Budget per 3: ~5,000-7,000 yen totali.<br><br><b>Golden Gai</b> — 200+ micro-bar in 6 vicoli stretti. Ogni bar ha 5-10 posti. Portiamo <b>solo cash</b>. Cover charge 500-1,000 yen (è normale). Entriamo in almeno <b>2-3 bar diversi</b>. Bar consigliati: <i>Ace's</i> (prezzi bassi), <i>Black Sun</i> (jazz), <i>Albatross</i> (su 3 piani, atmosfera unica). Parliamo col bartender — questo È Golden Gai. Budget: ~3,000-5,000 yen a testa.",
         maps: "https://maps.app.goo.gl/QgztVtSP3qzJkzHL6",
-        image: "https://images.unsplash.com/photo-1554797589-7241bb691548?w=800&h=400&fit=crop" }
+        image: "/itinerary/tokyo-night-bars.svg" }
     ]
   },
   {
@@ -93,7 +93,7 @@ export const itineraryData: DayData[] = [
       { time: "10:00", title: "teamLab Planets — L'esperienza più immersiva (prenotato!)",
         detail: "Un museo dove camminiamo nell'arte. Letteralmente. Piedi nudi nell'acqua, luci, specchi, fiori digitali. È l'esperienza più Instagrammabile del Giappone — ma è anche genuinamente bellissima.<br><br><b>Prenotazione obbligatoria</b> su teamlabplanets.dmm.com. ~3,800-4,800 yen (prezzo dinamico). Arriviamo 15 min prima. <b>Pantaloni:</b> corti o arrotolabili — cammineremo nell'acqua fino alle ginocchia. Zaini nei locker gratuiti, solo telefono (waterproof case consigliata).<br><br>Non corriamo. La stanza dell'<b>acqua infinita con le carpe koi</b> è la più iconica — restiamoci almeno 10 minuti. Il <b>giardino dei fiori</b> alla fine è pazzesco per foto.<br><b>Tempo:</b> 2 ore",
         maps: "https://maps.app.goo.gl/x9FvDfd7Y3K8Z5mM9",
-        image: "https://images.unsplash.com/photo-1579783928621-7a13d66a62b1?w=800&h=400&fit=crop" },
+        image: "/itinerary/tokyo-future.svg" },
       { time: "13:00", title: "Pranzo a Tsukiji/Toyosu",
         detail: "Siamo vicini a Toyosu, dove si è spostato il vecchio mercato del pesce. Per mangiare il meglio:<br><br><b>Opzione 1 — Tsukiji Outer Market</b> (il mercato esterno è ancora attivo): <i>Sashimi freschissimo</i> sui banchi — tonno, salmone, <i>uni</i> (riccio di mare). <i>Tamago-yaki</i> (frittata dolce su stecco, ~300 yen). <i>Gyudon</i> (ciotola di riso e manzo) da uno dei chioschi.<br><br><b>Opzione 2 — Ramen vicino Toyosu:</b> un buon ramen costa ~1,000-1,200 yen ed è il pranzo perfetto.",
         maps: "https://www.google.com/maps/search/?api=1&query=Tsukiji+Outer+Market",
@@ -101,7 +101,7 @@ export const itineraryData: DayData[] = [
       { time: "14:30", title: "Odaiba — Tokyo futuristica",
         detail: "Prendiamo il <b>Yurikamome</b> (treno sopraelevato automatico — sì, senza conducente) verso Odaiba. Passeggiata lungo la baia con vista sulla <b>Rainbow Bridge</b> e lo skyline. <b>Unicorn Gundam</b> a grandezza naturale davanti al DiverCity — alto 20 metri, si muove a orari prestabiliti. Anche se non ci interessa, è impressionante.<br><br>Se abbiamo voglia di follia: <b>Joypolis</b> — parco giochi indoor di Sega con VR e giochi arcade.<br><br><b>Serve per:</b> vedere una Tokyo completamente diversa. Moderna, spaziosa, futuristica.<br><b>Tempo:</b> 2-3 ore",
         maps: "https://www.google.com/maps/search/?api=1&query=Unicorn+Gundam+Statue+Odaiba",
-        image: "https://images.unsplash.com/photo-1624601573012-efb68f3b1b85?w=800&h=400&fit=crop" },
+        image: "/itinerary/tokyo-future.svg" },
       { time: "20:30", title: "Bar BenFiddich — L'Esperienza",
         detail: "Numero 18 nella classifica <b>World's 50 Best Bars</b>. Il bartender <b>Hiroyasu Kayama</b> coltiva le erbe nel suo giardino, macina spezie al momento, e crea ogni cocktail su misura. Non esiste un menu.<br><br><b>Prenotazione OBBLIGATORIA</b> — via TableCheck. 3 slot: 19:00-20:50, 21:00-22:50, 23:00-00:50. Prendiamo il secondo. Location: 9° piano, Yamatoya Building, Nishi-Shinjuku. Niente insegna fuori. <b>Dress code:</b> smart casual. Solo <b>15 posti</b> — prenotare settimane prima.<br><br>Ci sediamo al bancone davanti a Kayama. Gli diciamo cosa ci piace — creerà qualcosa solo per noi. Mortaio, erbe fresche, tecniche uniche. 2-3 cocktail a testa, ~3,000-4,500 yen l'uno.<br><b>Budget per 3:</b> ~25,000-35,000 yen<br><br><b>Questo è uno di quei posti che racconteremo per sempre.</b>",
         maps: "https://maps.app.goo.gl/5Z5M6vFQ1mLq3U6z8",
@@ -181,15 +181,15 @@ export const itineraryData: DayData[] = [
       { time: "12:00", title: "Kinkaku-ji — Il Padiglione d'Oro",
         detail: "Il tempio ricoperto d'oro che si riflette nel lago. Dal vivo è ancora più impressionante. <b>Biglietto:</b> 500 yen — ci danno un biglietto che è un talismano calligrafico, teniamolo come souvenir. Il percorso è obbligato (~30-45 min). La foto migliore è dal primo punto di osservazione — il tempio riflesso nel lago. Prendiamo un <i>matcha con dolcetto</i> nella casa del tè (~500 yen).<br><b>Tempo:</b> 1 ora",
         maps: "https://maps.app.goo.gl/H7K3HKdE5Ny7WJCR6",
-        image: "https://images.unsplash.com/photo-1623785013715-70e3e3c7e15c?w=800&h=400&fit=crop" },
+        image: "/itinerary/kyoto-classic.svg" },
       { time: "14:00", title: "Arashiyama — Bambù e Scimmie",
         detail: "La foresta di bambù. Uno dei posti più iconici del Giappone. Camminiamo nel <b>Bamboo Grove</b> — il suono del vento tra i bambù è ipnotico. Il sentiero è corto (~500m) ma bellissimo. <b>Continuiamo oltre</b> la folla verso l'<b>Okochi Sanso Garden</b> (1,000 yen) — giardino meno visitato con vista spettacolare e matcha incluso.<br><br>Camminiamo verso il fiume fino al <b>Togetsukyo Bridge</b> — ponte iconico con le montagne dietro.<br><br><b>Bonus: Monkey Park Iwatayama</b> — 15 min di salita e poi 120+ scimmie libere in cima. Vista panoramica su Kyoto. ~550 yen. Diamo da mangiare alle scimmie (dall'interno di una gabbia — noi dentro, loro fuori).<br><b>Tempo:</b> 3-4 ore per tutto Arashiyama",
         maps: "https://maps.app.goo.gl/1qKBa8XuXM5JCGkz9",
-        image: "https://images.unsplash.com/photo-1580623027781-a7db8c6bd092?w=800&h=400&fit=crop" },
+        image: "/itinerary/kyoto-classic.svg" },
       { time: "19:00", title: "Gion + Pontocho — Cena e geisha",
         detail: "Il quartiere più elegante di Kyoto. Strade di pietra, lanterne, case di legno tradizionali.<br><br>Camminiamo lungo <b>Hanami-koji</b>. Se vediamo una geisha o maiko, NON le blocchiamo, NON le tocchiamo. Possiamo fotografarle di sfuggita ma con rispetto. Esploriamo i vicoli laterali — <b>Shirakawa</b> lungo il canale con i salici è magico la sera.<br><br><b>Cena a Pontocho Alley</b> — vicolo stretto parallelo al fiume Kamogawa. Scegliamo uno con affaccio sul fiume. Proviamo: <i>obanzai</i> (cucina casalinga di Kyoto, ~2,500-3,500 yen) oppure <i>shabu-shabu</i> (manzo sottile cotto nel brodo).",
         maps: "https://maps.app.goo.gl/xFUi6PSQRvUb2UEq5",
-        image: "https://images.unsplash.com/photo-1522623349500-de288cb2a5a7?w=800&h=400&fit=crop" }
+        image: "/itinerary/kyoto-classic.svg" }
     ]
   },
   {
@@ -202,7 +202,7 @@ export const itineraryData: DayData[] = [
       { time: "12:00", title: "Philosopher's Path — La passeggiata contemplativa",
         detail: "2 km di sentiero lungo un canale, fiancheggiato da centinaia di ciliegi. A fine marzo i primi fiori potrebbero già essere aperti.<br><br>Camminiamo con calma. Non è una destinazione, è il percorso stesso l'esperienza. Lungo il sentiero ci sono piccoli templi e caffè nascosti. Ci fermiamo per un <i>matcha latte</i> in uno dei cafeteria lungo il percorso.<br><b>Tempo:</b> 1-1.5 ore",
         maps: "https://maps.app.goo.gl/G7gDTrZrFSsPaHCe8",
-        image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=800&h=400&fit=crop" },
+        image: "/itinerary/kyoto-classic.svg" },
       { time: "14:00", title: "Pranzo + Pomeriggio libero",
         detail: "<b>Ramen a Kyoto:</b> <i>Ippudo Kyoto</i> — tonkotsu cremoso, ~1,000 yen. Oppure <i>Menbakaichidai</i> — il 'ramen di fuoco': il cameriere versa olio bollente e si alza una fiammata. Spettacolare. ~900 yen.<br><br><b>Pomeriggio:</b><br>• <b>Shopping a Teramachi/Shinkyogoku</b> — vie coperte con negozi e souvenir<br>• <b>Ceremonia del tè</b> — 45-60 min (~2,000-3,000 yen). Ci insegnano il rituale, prepariamo il tè noi stessi<br>• <b>Sake tasting a Fushimi</b> — il quartiere del sake a sud. <i>Gekkeikan Okura Sake Museum</i> (400 yen, include assaggi)",
         maps: "https://www.google.com/maps/search/?api=1&query=Teramachi+Kyoto",
@@ -257,7 +257,7 @@ export const itineraryData: DayData[] = [
       { time: "09:30", title: "I Cervi di Nara Park + Todai-ji",
         detail: "<b>I cervi:</b> Compriamo i <i>shika senbei</i> (cracker, ~200 yen). Quando mostriamo il cracker, il cervo si inchina — inchiniamoci anche noi e poi diamoglielo. Nascondiamo i cracker dopo averli comprati — i cervi sono furbi e insistenti. Ci circonderanno.<br><br><b>Todai-ji</b> — L'edificio in legno più grande del mondo. Dentro c'è un <b>Buddha di bronzo alto 15 metri</b>. Quando entriamo, la scala ci colpirà fisicamente.<br><br><b>La sfida del pilastro:</b> uno dei pilastri ha un buco alla base grande quanto la narice del Buddha (~30x37cm). Se riusciamo a passarci attraverso, ci porta fortuna. Proviamoci, ridiamo, facciamo video.<br><b>Biglietto:</b> 600 yen | <b>Tempo:</b> 45-60 min",
         maps: "https://maps.app.goo.gl/RWCRvkNhU9JbHYcH8",
-        image: "https://images.unsplash.com/photo-1624601573012-efb68f3b1b85?w=800&h=400&fit=crop" },
+        image: "/itinerary/nara-deer.svg" },
       { time: "12:00", title: "Kasuga Taisha + Pranzo",
         detail: "Camminiamo attraverso il parco verso <b>Kasuga Taisha</b> — il santuario con migliaia di <b>lanterne di pietra</b> coperte di muschio. Atmosfera da film Ghibli.<br><br><b>Pranzo:</b> <i>Kakinoha-zushi</i> (sushi avvolto in foglia di cachi, specialità locale) ~800-1,200 yen.<br><b>Tempo totale Nara:</b> 4-5 ore, poi torniamo a Osaka nel primo pomeriggio.",
         maps: "https://maps.app.goo.gl/FZFBV4uQfX5x3BwM9",
@@ -320,7 +320,7 @@ export const itineraryData: DayData[] = [
       { time: "11:00", title: "Shopping duty-free — L'ultimo colpo",
         detail: "<b>Cosa comprare all'ultimo:</b><br>• <i>Kit-Kat</i> gusti esclusivi (matcha, sake, strawberry cheesecake, ume)<br>• <i>Sake</i> — una bottiglia buona costa ~2,000-5,000 yen<br>• <i>Whisky giapponese</i> — Suntory, Nikka. Se troviamo qualcosa di buono, prendiamolo. In Italia costano il triplo<br>• <i>Snack dal konbini</i> — Tokyo Banana, Royce chocolate, castagne dolci<br>• <i>Ceramica</i> — se abbiamo comprato qualcosa a Kyoto, imballiamola bene<br><br>Ultimo sguardo al Giappone dal finestrino. 14 giorni, 3 amici, zero rimpianti. Un paio di chili in più, un buco nel conto in banca. Non importa. Ci torneremo. È una promessa tra uomini. Non stiamo piangendo, è il jetlag.",
         maps: "https://www.google.com/maps/search/?api=1&query=KIX+Duty+Free",
-        image: "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&h=400&fit=crop" }
+        image: "/itinerary/airport-last-call.svg" }
     ]
   }
 ];
@@ -387,7 +387,7 @@ export const bonusExperiences: BonusExperience[] = [
     location: "Tokyo", cost: "~10,000-12,000 yen", duration: "1-2 ore",
     detail: "L'esperienza pi\u00F9 folle. Guidiamo go-kart veri per le strade di Tokyo vestiti in costume (Mario, Luigi, qualsiasi cosa). Attraversiamo Shibuya Crossing in kart. La gente ci filma. \u00C8 surreale. <b>IMPORTANTE:</b> Serve la Patente di Guida Internazionale (IDP). Da fare in Italia prima, ~40 EUR in motorizzazione. Prenotiamo online almeno 3-4 giorni prima.",
     maps: "https://streetkart.com/en/",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=400&fit=crop"
+    image: "/itinerary/tokyo-rides.svg"
   },
   {
     title: "Samurai Sword Cutting (Tameshigiri)",
@@ -401,7 +401,7 @@ export const bonusExperiences: BonusExperience[] = [
     location: "Tokyo", cost: "~15,000-40,000 yen", duration: "2-4 ore",
     detail: "Ride-along su una drift car guidata da un pilota professionista, oppure guidiamo noi su circuito. Macchine JDM iconiche: Nissan Silvia, Toyota GT86, Mazda RX-7. Fast & Furious vibes reali. Bonus: il <i>Daikoku PA car meet</i> \u00E8 un raduno notturno di auto JDM. Gratuito, venerd\u00EC/sabato sera.",
     maps: "https://driftintokyo.com/",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=400&fit=crop"
+    image: "/itinerary/tokyo-rides.svg"
   },
   {
     title: "Speakeasy segreti di Tokyo",
@@ -415,7 +415,7 @@ export const bonusExperiences: BonusExperience[] = [
     location: "Kyoto", cost: "~400-600 yen", duration: "1-2 ore",
     detail: "Il distretto di Fushimi ha alcune delle distillerie pi\u00F9 antiche del Giappone. Gekkeikan Okura Sake Museum o Kizakura Sake Brewery. Tour + degustazione. Compriamo una bottiglia di sake locale come souvenir \u2014 non si trova fuori dal Giappone.",
     maps: "https://www.google.com/maps/search/?api=1&query=Fushimi+Sake+District",
-    image: "https://images.unsplash.com/photo-1516253593875-bd7ba052f0fd?w=800&h=400&fit=crop"
+    image: "/itinerary/sake-brewery.svg"
   },
   {
     title: "Fugu \u2014 Il pesce potenzialmente letale",

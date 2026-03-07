@@ -84,8 +84,9 @@ export default {
       },
       fontFamily: {
         sans: ["'Plus Jakarta Sans'", "var(--font-sans)", "sans-serif"],
+        fraunces: ["'Fraunces'", "Georgia", "serif"],
         serif: ["var(--font-serif)"],
-        mono: ["var(--font-mono)"],
+        mono: ["'Space Mono'", "var(--font-mono)"],
       },
       keyframes: {
         "accordion-down": {

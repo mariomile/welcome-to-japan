@@ -1,0 +1,15 @@
+<svg width="1600" height="800" viewBox="0 0 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="800" fill="#08111F"/>
+  <circle cx="360" cy="238" r="172" fill="#7C3AED" fill-opacity="0.38"/>
+  <circle cx="1168" cy="214" r="148" fill="#06B6D4" fill-opacity="0.34"/>
+  <circle cx="834" cy="384" r="244" fill="#E11D48" fill-opacity="0.18"/>
+  <path d="M202 522C318 412 478 354 648 354C838 354 990 426 1174 426C1269 426 1355 408 1438 370" stroke="#67E8F9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M232 578C402 442 546 418 714 418C870 418 1030 484 1180 484C1260 484 1342 462 1410 428" stroke="#F9A8D4" stroke-width="10" stroke-linecap="round"/>
+  <path d="M178 635C338 558 464 528 620 528C820 528 934 598 1128 598C1240 598 1322 574 1420 526" stroke="#C4B5FD" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="702" cy="302" r="84" stroke="#F8FAFC" stroke-width="12"/>
+  <circle cx="702" cy="302" r="28" fill="#F8FAFC"/>
+  <rect x="1092" y="286" width="180" height="180" rx="24" stroke="#22D3EE" stroke-width="12"/>
+  <rect x="334" y="278" width="182" height="182" rx="91" stroke="#F472B6" stroke-width="12"/>
+  <text x="124" y="654" fill="#F8FAFC" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="700">Tokyo Future Mode</text>
+  <text x="124" y="710" fill="#C4B5FD" font-family="'Space Mono', monospace" font-size="24" letter-spacing="3">teamLab • Odaiba • luci immersive</text>
+</svg>

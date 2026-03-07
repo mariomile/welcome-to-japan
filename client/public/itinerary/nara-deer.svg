@@ -1,0 +1,15 @@
+<svg width="1600" height="800" viewBox="0 0 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="800" fill="#EEF4E8"/>
+  <rect y="560" width="1600" height="240" fill="#C7D9B0"/>
+  <rect x="1024" y="190" width="240" height="316" rx="16" fill="#8B5E34"/>
+  <rect x="1108" y="254" width="72" height="252" fill="#6B4423"/>
+  <path d="M264 532C264 446 330 382 416 382H482C568 382 634 446 634 532V556H264V532Z" fill="#A16207"/>
+  <circle cx="352" cy="344" r="72" fill="#A16207"/>
+  <path d="M316 276L274 196" stroke="#7C2D12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M334 268L328 182" stroke="#7C2D12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M388 276L432 190" stroke="#7C2D12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M410 282L476 210" stroke="#7C2D12" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="332" cy="336" r="8" fill="#1F2937"/>
+  <text x="120" y="652" fill="#24301C" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="700">Nara Park + Todai-ji</text>
+  <text x="120" y="708" fill="#556B45" font-family="'Space Mono', monospace" font-size="24" letter-spacing="3">cervi inchinati • Buddha gigante • prato sacro</text>
+</svg>

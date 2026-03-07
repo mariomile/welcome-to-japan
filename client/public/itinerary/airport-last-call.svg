@@ -1,0 +1,13 @@
+<svg width="1600" height="800" viewBox="0 0 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="800" fill="#0D1B2A"/>
+  <rect y="520" width="1600" height="280" fill="#13263A"/>
+  <path d="M146 550H1456" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round" stroke-dasharray="18 22"/>
+  <path d="M298 262H1268" stroke="#334155" stroke-width="14" stroke-linecap="round"/>
+  <path d="M598 384L868 316L1092 368L862 406L716 486L636 470L742 398L570 420L598 384Z" fill="#F8FAFC"/>
+  <rect x="206" y="170" width="176" height="222" rx="20" fill="#1E293B"/>
+  <rect x="234" y="204" width="120" height="18" rx="9" fill="#E11D48"/>
+  <rect x="234" y="250" width="112" height="18" rx="9" fill="#60A5FA"/>
+  <rect x="234" y="296" width="96" height="18" rx="9" fill="#34D399"/>
+  <text x="120" y="652" fill="#F8FAFC" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="700">Shopping duty-free</text>
+  <text x="120" y="708" fill="#CBD5E1" font-family="'Space Mono', monospace" font-size="24" letter-spacing="3">ultimo whisky • snack da volo • partenza KIX</text>
+</svg>
