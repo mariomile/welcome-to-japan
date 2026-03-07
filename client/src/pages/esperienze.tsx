@@ -1,85 +1,93 @@
 import { useState } from "react";
-import { bonusExperiences } from "@/lib/itinerary-data";
 import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 import Layout from "@/components/layout";
 import { SafeHtml } from "@/components/safe-html";
+import { bonusExperiences } from "@/lib/itinerary-data";
 
 export default function Esperienze() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
     <Layout>
-      <header className="pt-8 pb-6 px-4 bg-white border-b border-slate-200">
-        <div className="max-w-2xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900" data-testid="text-bonus-heading">Esperienze Folli</h1>
-          <p className="mt-1 text-slate-500 text-sm sm:text-base">Opzionali ma consigliatissime. Le cose che ci rendono leggendari.</p>
+      <header className="border-b border-border bg-card/90 px-4 pb-6 pt-8 backdrop-blur-sm">
+        <div className="mx-auto max-w-2xl">
+          <h1 className="font-fraunces italic text-2xl font-bold text-foreground sm:text-3xl" data-testid="text-bonus-heading">Esperienze Folli</h1>
+          <p className="mt-1 text-sm text-muted-foreground sm:text-base">Opzionali ma consigliatissime. Le cose che ci rendono leggendari.</p>
         </div>
       </header>
 
-      <main className="max-w-2xl mx-auto px-4 py-4 pb-24 space-y-3">
-        {bonusExperiences.map((exp, idx) => (
-          <div
-            key={idx}
-            className="bg-white rounded-xl border border-slate-200 overflow-hidden"
-            data-testid={`card-bonus-${idx}`}
+      <main className="mx-auto max-w-2xl space-y-3 px-4 py-4 pb-24">
+        {bonusExperiences.map((experience, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.04, ease: [0.25, 0.1, 0.25, 1] }}
+            className="overflow-hidden rounded-xl border border-border bg-card shadow-sm"
+            data-testid={`card-bonus-${index}`}
           >
-            {exp.image && (
+            {experience.image && (
               <img
-                src={exp.image}
-                alt={exp.title}
-                className="w-full h-36 sm:h-44 object-cover"
+                src={experience.image}
+                alt={experience.title}
+                className="h-36 w-full object-cover sm:h-44"
                 loading="lazy"
               />
             )}
+
             <div className="p-4">
-              <div className="flex items-start justify-between gap-2 mb-1.5">
-                <h3 className="text-base font-extrabold text-slate-900 leading-tight">{exp.title}</h3>
-                <span className="text-[10px] font-bold text-[#E11D48] bg-rose-50 px-2 py-0.5 rounded flex-shrink-0">{exp.location}</span>
-              </div>
-              <div className="flex gap-2 mb-2 text-xs text-slate-500 font-semibold">
-                <span>{exp.cost}</span>
-                <span>&bull;</span>
-                <span>{exp.duration}</span>
+              <div className="mb-1.5 flex items-start justify-between gap-2">
+                <h3 className="font-fraunces text-base font-semibold leading-tight text-foreground">{experience.title}</h3>
+                <span className="flex-shrink-0 rounded border border-primary/20 bg-primary/8 px-2 py-0.5 font-mono text-[10px] font-semibold text-primary">{experience.location}</span>
               </div>
 
-              {expanded === idx ? (
+              <div className="mb-2 flex gap-2 font-mono text-xs text-muted-foreground">
+                <span>{experience.cost}</span>
+                <span>&bull;</span>
+                <span>{experience.duration}</span>
+              </div>
+
+              {expanded === index ? (
                 <>
                   <SafeHtml
-                    html={exp.detail}
-                    className="text-sm text-slate-600 leading-relaxed mb-3 [&_b]:text-slate-900 [&_b]:font-bold [&_i]:text-[#E11D48] [&_i]:not-italic [&_i]:font-semibold"
+                    html={experience.detail}
+                    className="mb-3 text-sm leading-relaxed text-muted-foreground [&_b]:font-bold [&_b]:text-foreground [&_i]:font-semibold [&_i]:not-italic [&_i]:text-primary"
                   />
                   <div className="flex items-center gap-3">
                     <a
-                      href={exp.maps}
+                      href={experience.maps}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E11D48] bg-rose-50 px-3 py-2 rounded-lg active:bg-rose-100"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary/10 px-3 py-2 text-xs font-bold text-primary transition-colors hover:bg-primary/15"
                     >
-                      <ExternalLink className="w-3 h-3" />
+                      <ExternalLink className="h-3 w-3" />
                       Info
                     </a>
                     <button
+                      type="button"
                       onClick={() => setExpanded(null)}
-                      className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 px-3 py-2"
-                      data-testid={`button-collapse-bonus-${idx}`}
+                      className="inline-flex items-center gap-1 px-3 py-2 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
+                      data-testid={`button-collapse-bonus-${index}`}
                     >
-                      <ChevronUp className="w-3 h-3" />
+                      <ChevronUp className="h-3 w-3" />
                       Chiudi
                     </button>
                   </div>
                 </>
               ) : (
                 <button
-                  onClick={() => setExpanded(idx)}
-                  className="inline-flex items-center gap-1 text-xs font-bold text-[#E11D48] px-0 py-1"
-                  data-testid={`button-expand-bonus-${idx}`}
+                  type="button"
+                  onClick={() => setExpanded(index)}
+                  className="inline-flex items-center gap-1 px-0 py-1 text-xs font-semibold text-primary hover:text-primary/80 transition-colors"
+                  data-testid={`button-expand-bonus-${index}`}
                 >
-                  <ChevronDown className="w-3 h-3" />
+                  <ChevronDown className="h-3 w-3" />
                   Dettagli
                 </button>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
       </main>
     </Layout>
