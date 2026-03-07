@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Layout from "@/components/layout";
 import { SafeHtml } from "@/components/safe-html";
 import { itineraryData, type DayData, type TimelineEntry } from "@/lib/itinerary-data";
+import { itineraryChoiceMap, type ItineraryChoiceInfo } from "@/lib/itinerary-alternatives";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -99,12 +100,15 @@ interface TimelineItemView {
   entryIndex: number;
   noteKey: string;
   isDone: boolean;
+  choiceInfo: ItineraryChoiceInfo;
 }
 
 function TimelineView({
   data,
   items,
   onToggle,
+  selectedChoices,
+  onSelectChoice,
   notes,
   openNotes,
   onToggleNote,
@@ -113,6 +117,8 @@ function TimelineView({
   data: DayData;
   items: TimelineItemView[];
   onToggle: (key: string) => void;
+  selectedChoices: Record<string, "primary" | "alternative">;
+  onSelectChoice: (key: string, choice: "primary" | "alternative") => void;
   notes: Record<string, string>;
   openNotes: Record<string, boolean>;
   onToggleNote: (key: string) => void;
@@ -121,9 +127,14 @@ function TimelineView({
   return (
     <div className="relative mt-4 pl-8">
       <div className="absolute bottom-0 left-[7px] top-0 w-0.5 bg-border" />
-      {items.map(({ item, entryIndex, noteKey, isDone }) => {
+      {items.map(({ item, entryIndex, noteKey, isDone, choiceInfo }) => {
         const hasNote = Boolean(notes[noteKey]?.trim());
         const noteOpen = Boolean(openNotes[noteKey]);
+        const selectedChoice = selectedChoices[noteKey] ?? "primary";
+        const displayTitle = selectedChoice === "alternative" ? choiceInfo.alternative.title : item.title;
+        const displayDetail = selectedChoice === "alternative" ? choiceInfo.alternative.detail : item.detail;
+        const displayMaps = selectedChoice === "alternative" ? choiceInfo.alternative.maps : item.maps;
+        const displayNote = selectedChoice === "alternative" ? choiceInfo.alternative.note : choiceInfo.primaryNote;
 
         return (
           <div key={`${data.day}-${entryIndex}`} className={`relative mb-10 transition-opacity ${isDone ? "opacity-60" : ""}`}>
@@ -150,7 +161,7 @@ function TimelineView({
                   type="button"
                   onClick={() => onToggleNote(noteKey)}
                   aria-expanded={noteOpen}
-                  aria-label={`Apri nota per ${item.title}`}
+                  aria-label={`Apri nota per ${displayTitle}`}
                   className={`relative flex h-8 w-8 items-center justify-center rounded-lg border transition-colors ${
                     hasNote
                       ? "border-primary/40 bg-primary/10 text-primary"
@@ -166,7 +177,7 @@ function TimelineView({
                   onClick={() => onToggle(noteKey)}
                   role="checkbox"
                   aria-checked={isDone}
-                  aria-label={`${item.title} - ${isDone ? "completato" : "da fare"}`}
+                  aria-label={`${displayTitle} - ${isDone ? "completato" : "da fare"}`}
                   className={`flex h-8 w-8 items-center justify-center rounded-lg border-2 transition-all ${
                     isDone ? "border-emerald-500 bg-emerald-500 text-white" : "border-input text-transparent hover:border-muted-foreground"
                   }`}
@@ -177,15 +188,43 @@ function TimelineView({
               </div>
             </div>
 
+            <div className="mb-2 flex flex-wrap items-center gap-2">
+              <div className="inline-flex rounded-full border border-border bg-card p-1">
+                <button
+                  type="button"
+                  onClick={() => onSelectChoice(noteKey, "primary")}
+                  className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${
+                    selectedChoice === "primary" ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+                  }`}
+                  data-testid={`button-choice-primary-${data.day}-${entryIndex}`}
+                >
+                  Principale
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onSelectChoice(noteKey, "alternative")}
+                  className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${
+                    selectedChoice === "alternative" ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+                  }`}
+                  data-testid={`button-choice-alt-${data.day}-${entryIndex}`}
+                >
+                  Piano B
+                </button>
+              </div>
+              <span className="inline-flex rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                Feb 2026
+              </span>
+            </div>
+
             <h4 className={`mb-1.5 font-fraunces text-base font-semibold leading-tight sm:text-lg ${isDone ? "text-muted-foreground line-through" : "text-foreground"}`} data-testid={`text-timeline-title-${entryIndex}`}>
-              {item.title}
+              {displayTitle}
             </h4>
 
             {item.image && (
               <div className="mb-3 overflow-hidden rounded-xl border border-border">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={displayTitle}
                   className="h-40 w-full object-cover sm:h-48"
                   loading="lazy"
                   data-testid={`img-activity-${data.day}-${entryIndex}`}
@@ -194,10 +233,15 @@ function TimelineView({
             )}
 
             <SafeHtml
-              html={item.detail}
+              html={displayDetail}
               className="text-sm leading-relaxed text-muted-foreground [&_b]:font-bold [&_b]:text-foreground [&_i]:font-semibold [&_i]:not-italic [&_i]:text-primary"
               data-testid={`text-timeline-detail-${entryIndex}`}
             />
+
+            <div className="mt-3 rounded-xl border border-primary/15 bg-primary/5 p-3">
+              <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Agg. Feb 2026</div>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-muted-foreground">{displayNote}</p>
+            </div>
 
             {noteOpen && (
               <div className="mt-3 rounded-xl border border-border bg-card/80 p-3">
@@ -225,9 +269,9 @@ function TimelineView({
               </div>
             )}
 
-            {item.maps && (
+            {displayMaps && (
               <a
-                href={item.maps}
+                href={displayMaps}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center space-x-1.5 rounded-lg bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary transition-colors hover:bg-primary/15"
@@ -248,6 +292,7 @@ export default function Piano() {
   const [currentDay, setCurrentDay] = useState(1);
   const [query, setQuery] = useState("");
   const [openNotes, setOpenNotes] = useState<Record<string, boolean>>({});
+  const [selectedChoices, setSelectedChoices] = useState<Record<string, "primary" | "alternative">>({});
   const { checked, toggle } = useCheckedItems();
   const { notes, setNote } = useNotes();
   const data = itineraryData.find((day) => day.day === currentDay)!;
@@ -271,6 +316,7 @@ export default function Piano() {
             entryIndex,
             noteKey: `d${data.day}-${entryIndex}`,
             isDone: Boolean(checked[`d${data.day}-${entryIndex}`]),
+            choiceInfo: itineraryChoiceMap[`d${data.day}-${entryIndex}`],
           })),
         },
       ];
@@ -288,15 +334,19 @@ export default function Piano() {
             entryIndex,
             noteKey: `d${day.day}-${entryIndex}`,
             isDone: Boolean(checked[`d${day.day}-${entryIndex}`]),
+            choiceInfo: itineraryChoiceMap[`d${day.day}-${entryIndex}`],
           }))
-          .filter(({ item }) => {
+          .filter(({ item, choiceInfo }) => {
             if (dayMatches) {
               return true;
             }
 
-            return [item.title, stripHtml(item.detail)].some((value) =>
-              value.toLowerCase().includes(normalizedQuery),
-            );
+            return [
+              item.title,
+              stripHtml(item.detail),
+              choiceInfo.alternative.title,
+              stripHtml(choiceInfo.alternative.detail),
+            ].some((value) => value.toLowerCase().includes(normalizedQuery));
           });
 
         return { day, items };
@@ -308,6 +358,10 @@ export default function Piano() {
 
   const toggleNote = (key: string) => {
     setOpenNotes((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const selectChoice = (key: string, choice: "primary" | "alternative") => {
+    setSelectedChoices((prev) => ({ ...prev, [key]: choice }));
   };
 
   return (
@@ -457,6 +511,8 @@ export default function Piano() {
               data={day}
               items={items}
               onToggle={toggle}
+              selectedChoices={selectedChoices}
+              onSelectChoice={selectChoice}
               notes={notes}
               openNotes={openNotes}
               onToggleNote={toggleNote}
