@@ -1,0 +1,14 @@
+<svg width="1600" height="800" viewBox="0 0 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="800" fill="#130A18"/>
+  <path d="M0 592C170 548 314 528 454 528C640 528 766 592 946 592C1132 592 1306 536 1600 466V800H0V592Z" fill="#1F2937"/>
+  <path d="M0 646C176 614 332 602 500 602C702 602 818 646 1016 646C1222 646 1386 600 1600 548V800H0V646Z" fill="#0F172A"/>
+  <path d="M278 454H470L560 388H766L844 454H942L996 512H214L278 454Z" fill="#EF4444"/>
+  <circle cx="342" cy="520" r="54" fill="#020617"/>
+  <circle cx="342" cy="520" r="28" fill="#94A3B8"/>
+  <circle cx="820" cy="520" r="54" fill="#020617"/>
+  <circle cx="820" cy="520" r="28" fill="#94A3B8"/>
+  <path d="M1140 262L1286 220L1356 260L1230 300L1140 262Z" fill="#F59E0B"/>
+  <path d="M1128 314L1236 282L1358 318L1242 352L1128 314Z" fill="#FB7185"/>
+  <text x="118" y="654" fill="#F8FAFC" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="700">Tokyo Speed Mode</text>
+  <text x="118" y="710" fill="#F9A8D4" font-family="'Space Mono', monospace" font-size="24" letter-spacing="3">go-kart • drift • neon e motori</text>
+</svg>

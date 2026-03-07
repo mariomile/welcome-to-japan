@@ -1,0 +1,17 @@
+<svg width="1600" height="800" viewBox="0 0 1600 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="800" fill="#F5EFE4"/>
+  <rect y="542" width="1600" height="258" fill="#D6C3A3"/>
+  <path d="M0 524C150 486 318 456 504 456C694 456 842 500 1012 500C1212 500 1388 462 1600 416V800H0V524Z" fill="#B45309" fill-opacity="0.18"/>
+  <path d="M882 222L1108 222L1146 314L844 314L882 222Z" fill="#8B5E34"/>
+  <rect x="874" y="314" width="204" height="172" fill="#C28A49"/>
+  <rect x="952" y="360" width="48" height="126" fill="#8B5E34"/>
+  <rect x="204" y="264" width="24" height="280" rx="12" fill="#B45309"/>
+  <rect x="260" y="232" width="24" height="312" rx="12" fill="#B45309"/>
+  <rect x="316" y="200" width="24" height="344" rx="12" fill="#B45309"/>
+  <rect x="372" y="232" width="24" height="312" rx="12" fill="#B45309"/>
+  <rect x="428" y="264" width="24" height="280" rx="12" fill="#B45309"/>
+  <path d="M1180 520C1260 392 1358 298 1456 234" stroke="#7C2D12" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="1380" cy="214" r="54" fill="#E11D48" fill-opacity="0.18"/>
+  <text x="118" y="654" fill="#3F2A17" font-family="'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="700">Kyoto Classica</text>
+  <text x="118" y="710" fill="#7C5A35" font-family="'Space Mono', monospace" font-size="24" letter-spacing="3">templi • bambu • geisha • sentieri lenti</text>
+</svg>
