@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout";
 
 const sections = [
-  { path: "/piano", icon: Map, title: "Il Piano di Battaglia", desc: "14 giorni, ora per ora. Dove andare, cosa ordinare, dove bere.", accent: "text-primary" },
+  { path: "/piano", icon: Map, title: "Il Piano di Battaglia", desc: "15 giorni, ora per ora. Dove andare, cosa ordinare, dove bere.", accent: "text-primary" },
   { path: "/prep", icon: ClipboardList, title: "Prima di Partire", desc: "Trasporti, soldi, app, etichetta. Tutto quello che serve sapere.", accent: "text-foreground" },
   { path: "/esperienze", icon: Sparkles, title: "Esperienze Folli", desc: "Go-kart, samurai, drift, speakeasy. Le cose che ci rendono leggendari.", accent: "text-emerald-600 dark:text-emerald-400" },
   { path: "/checklist", icon: CheckSquare, title: "Roba da Prenotare", desc: "10 cose da bloccare prima di salire sull'aereo.", accent: "text-amber-600 dark:text-amber-400" },
@@ -44,7 +44,7 @@ export default function Home() {
             Japponata!
           </h1>
           <p className="mx-auto mb-1.5 font-mono text-sm tracking-wide text-muted-foreground" data-testid="text-hero-subtitle">
-            19 Mar — 1 Apr 2026 · 3 amici · 14 giorni
+            19 Mar — 2 Apr 2026 · 3 amici · 15 giorni
           </p>
           <p className="mx-auto mb-6 font-mono text-xs tracking-wider text-muted-foreground/70">
             Tokyo · Nikko · Hakone · Kyoto · Osaka · Nara

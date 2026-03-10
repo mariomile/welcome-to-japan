@@ -63,7 +63,7 @@ export const itineraryData: DayData[] = [
     ]
   },
   {
-    day: 2, date: "20 Mar", title: "Shibuya iconica + Shibuya Sky + cocktail serio", location: "Tokyo", tag: "Shopping & Vibe", icon: "\u{1F6CD}\uFE0F",
+    day: 2, date: "20 Mar", title: "Harajuku + Shibuya Crossing + cocktail serio", location: "Tokyo", tag: "Shopping & Vibe", icon: "\u{1F6CD}\uFE0F",
     timeline: [
       { time: "09:00", title: "Meiji Jingu — Il reset mentale",
         detail: "Non è 'solo un tempio'. È una foresta sacra nel cuore di Tokyo. 700,000 alberi piantati 100 anni fa. Entriamo e il caos della città scompare.<br><br>1. Entriamo dal grande <b>torii in legno di cipresso</b> — il più grande del Giappone.<br>2. Camminiamo lentamente nel sentiero nel bosco (~10 min). Respiriamo. Silenzio.<br>3. Ci fermiamo davanti ai <b>barili di sake</b> (offerte all'imperatore) e ai <b>barili di vino</b> (regalo dalla Francia) — foto iconica.<br>4. Al santuario: offerta (moneta, inchino 2 volte, mani 2 volte, inchino). Scriviamo un <i>ema</i> (~500 yen) — il nostro desiderio per il viaggio.<br><br><b>Pro tip:</b> Andiamo presto (prima delle 10) per evitare la folla. A volte si assiste a un matrimonio shintoista.<br><b>Tempo:</b> 60-90 min | <b>Budget:</b> ~600 yen",
@@ -73,8 +73,8 @@ export const itineraryData: DayData[] = [
         detail: "Da Meiji Jingu usciamo verso Harajuku. <b>Takeshita Street:</b> la via del caos — moda kawaii, crepe giganti, gente vestita in modo assurdo. Attraversiamola per l'esperienza.<br><br><b>Cat Street:</b> molto più figa. Negozi streetwear, vintage, design:<br>• <i>BAPE Store</i> — streetwear iconico giapponese<br>• <i>Neighborhood</i> — brand cult underground<br>• <i>Vintage shops</i> — pezzi unici di seconda mano<br>• <i>Design Festa Gallery</i> — arte underground gratuita<br><br>Prendiamo una <i>crepe giapponese</i> da Marion Crepes (~500 yen) — rito di passaggio Harajuku.<br><b>Pro tip:</b> Entriamo nei negozi piccoli laterali. I pezzi migliori non sono nelle catene.",
         maps: "https://maps.app.goo.gl/vqM5NUPsXv6mU5zd6",
         image: "https://images.unsplash.com/photo-1542931287-023b922fa89b?w=800&h=400&fit=crop" },
-      { time: "15:30", title: "Shibuya Crossing + Shibuya Sky",
-        detail: "<b>Shibuya Crossing</b> — L'incrocio più famoso del mondo. Fino a 3,000 persone lo attraversano a ogni semaforo verde. Attraversiamolo almeno 2 volte, poi saliamo allo <b>Starbucks al 2° piano del Tsutaya Building</b> per la vista dall'alto. Troviamo la <b>statua di Hachiko</b> all'uscita della stazione — foto veloce.<br><br><b>Shibuya Sky</b> — Osservatorio a 230 metri. Vista a 360° su tutta Tokyo. <b>Prenotazione obbligatoria</b> su shibuya-sky.com. ~2,000 yen. Prenotiamo lo slot delle 16:30-17:00 per il tramonto. Rooftop all'aperto con amache. Portiamo la giacca — a 230 metri c'è vento.",
+      { time: "15:30", title: "Shibuya Crossing — L'incrocio più famoso del mondo",
+        detail: "<b>Shibuya Crossing</b> — Fino a 3,000 persone lo attraversano a ogni semaforo verde. Attraversiamolo almeno 2 volte, poi saliamo allo <b>Starbucks al 2° piano del Tsutaya Building</b> per la vista dall'alto. Troviamo la <b>statua di Hachiko</b> all'uscita della stazione — foto iconica.<br><br><b>Scramble Square</b> (gratis dall'esterno) + passeggiata nel quartiere. <b>Shibuya Hikarie</b> — centro commerciale futuristico con food hall. Giriamo senza meta nei vicoli laterali — i migliori bar e ristorantini sono nascosti qui. <b>Tobacco & Salt Museum</b> vicino — piccolo, curioso, quasi vuoto (~100 yen).<br><br>La Shibuya Sky la vediamo il 23 con slot prenotato alle 18:00 — questo pomeriggio ci godiamo l'energia del quartiere al livello strada.",
         maps: "https://maps.app.goo.gl/VmWv7U7fsX1Vv8nS6",
         image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&h=400&fit=crop" },
       { time: "19:30", title: "The SG Club — Cocktail di livello mondiale",
@@ -130,7 +130,7 @@ export const itineraryData: DayData[] = [
     ]
   },
   {
-    day: 5, date: "23 Mar", title: "Tokyo local + Akihabara + Sushi della vita", location: "Tokyo", tag: "Nerd & Omakase", icon: "\u{1F47E}",
+    day: 5, date: "23 Mar", title: "Akihabara + Shibuya Sky + Sushi della vita", location: "Tokyo", tag: "Nerd & Omakase", icon: "\u{1F47E}",
     timeline: [
       { time: "10:00", title: "Ameyoko Market — Il mercato caotico",
         detail: "Il mercato di strada più caotico di Tokyo. Nato come mercato nero del dopoguerra, oggi è un mix di street food, vestiti, spezie e caos puro.<br><br><b>Cosa fare:</b> <i>Street food</i> — frutta fresca con cioccolato (~500 yen), spiedini di carne, takoyaki. <i>Fresh seafood</i> — banchi con ricci di mare, granchi, sashimi da mangiare sul posto. Compriamo souvenir: tè giapponese, dolci, spezie — prezzi migliori che nei negozi.<br><br>L'atmosfera è tipo mercato di strada asiatico — venditori che urlano, gente ovunque.<br><b>Tempo:</b> 1.5-2 ore",
@@ -140,11 +140,11 @@ export const itineraryData: DayData[] = [
         detail: "Anche se non siamo nerd, Akihabara è un'esperienza. Palazzi interi di arcade, manga, figure, elettronica.<br><br><b>Cosa fare assolutamente:</b><br>• <b>GiGO Arcade</b> — giochi di ritmo, claw machines, giochi assurdi. Almeno 1 ora qui.<br>• <b>Taito Station</b> — Proviamo <i>Taiko no Tatsujin</i> (tamburi).<br>• <b>Super Potato</b> — negozio retrogaming leggendario. NES, SNES, Game Boy. Anche se non compriamo, è un museo.<br>• <b>Don Quijote (Donki)</b> — il discount store più folle del Giappone. 7 piani: snack, gadget, Kit-Kat gusti assurdi (matcha, sake, fragola). Compriamo Kit-Kat come souvenir.<br>• <b>Maid café</b> (opzionale ma cringe obbligatorio) — ci chiameranno 'Master'. Content imbarazzante garantito.<br><br><b>Budget:</b> ~3,000-5,000 yen (giochi + snack + souvenir)",
         maps: "https://maps.app.goo.gl/kL8E8oUKBvYJFD2g8",
         image: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&h=400&fit=crop" },
-      { time: "16:00", title: "Tempo libero — ultimi giri a Tokyo",
-        detail: "Ultime ore libere a Tokyo. Opzioni:<br><br>• Shopping last-minute a Shibuya o Shinjuku<br>• Rilassarci in un <i>kissaten</i> (caffè tradizionale) — proviamo il café au lait e un toast spesso<br>• Tornare in un posto che ci è piaciuto particolarmente<br>• <b>Sento</b> (bagno pubblico, ~500 yen) — esperienza locale autentica. Stesso protocollo dell'onsen: nudi, lavarsi prima, poi vasca calda",
-        maps: "https://www.google.com/maps/search/?api=1&query=Shinjuku+Tokyo",
-        image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&h=400&fit=crop" },
-      { time: "20:00", title: "Sushi Omakase — La cena della vita (prenotato!)",
+      { time: "16:00", title: "Shibuya Sky — Tramonto sui grattacieli (prenotato!)",
+        detail: "<b>Shibuya Sky</b> — Osservatorio a 230 metri, rooftop all'aperto con amache sospese nel vuoto. Vista a 360° su tutta Tokyo: Fuji in lontananza, la Scramble Crossing dal cielo, Tokyo Tower, Tokyo Skytree. <b>Slot prenotato alle 18:00</b> — arriviamo 30 minuti prima. ~2,000 yen. Portiamo la giacca — a 230 metri c'è vento anche a marzo.<br><br>Il tramonto da qui è uno dei migliori di Tokyo. Prima delle 18 c'è ancora luce calda, poi la città si illumina e il panorama cambia completamente. Usciamo intorno alle 19:30.",
+        maps: "https://maps.app.goo.gl/VmWv7U7fsX1Vv8nS6",
+        image: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&h=400&fit=crop" },
+      { time: "20:30", title: "Sushi Omakase — La cena della vita (prenotato!)",
         detail: "L'esperienza culinaria definitiva del viaggio. Sushi al bancone, chef davanti a noi, pesce tagliato al momento. Silenzio. Concentrazione. Arte.<br><br><b>Come funziona:</b> 'Omakase' significa 'mi affido a te'. Lo chef decide tutto. Ci sediamo al bancone (3 posti di fila perfetti per noi). Il pesce arriva un pezzo alla volta — lo mangiamo appena servito. Il riso è tiepido, il pesce a temperatura perfetta. <b>Non mettiamo wasabi:</b> lo chef l'ha già messo. Non affoghiamo il sushi nella soia — un tocco leggero solo sulla parte del pesce. 12-15 pezzi + qualche extra.<br><br><b>Dove:</b> Fascia 15,000-25,000 yen a testa. <i>Sushi Sho</i> (Yotsuya, eccellente) | Omakase a Tsukiji (~10,000-15,000 yen, ottima qualità).<br><b>Pro tip:</b> Prenotare 2-3 settimane prima. Molti accettano prenotazioni solo in giapponese — chiediamo al nostro hotel.<br><br><b>Questa sera la ricorderemo per sempre.</b>",
         maps: "https://www.google.com/maps/search/?api=1&query=Ginza+Sushi+Omakase",
         image: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&h=400&fit=crop" }
@@ -214,24 +214,24 @@ export const itineraryData: DayData[] = [
     ]
   },
   {
-    day: 9, date: "27 Mar", title: "Esperienza culturale + si parte per Osaka", location: "Kyoto \u2192 Osaka", tag: "Transizione", icon: "\u{1F685}",
+    day: 9, date: "27 Mar", title: "Arashiyama + Pontocho — il meglio di Kyoto", location: "Kyoto", tag: "Natura & Cucina", icon: "\u{1F38B}",
     timeline: [
       { time: "09:00", title: "Mattina — Esperienza culturale",
         detail: "<b>Opzione 1 — Ryoan-ji:</b> il giardino zen di roccia più famoso del mondo (~500 yen). 15 rocce, sabbia rastrellata. Sediamoci e guardiamolo in silenzio per 10 minuti. Poi passeggiamo nel giardino circostante.<br><br><b>Opzione 2 — Cooking class:</b> Impariamo a preparare ramen, sushi o okonomiyaki (~5,000-8,000 yen, 2-3 ore). Prenotare su Airbnb Experiences o cookly.me. Un'esperienza perfetta per 3 amici e un ricordo che ci portiamo a casa.",
         maps: "https://www.google.com/maps/search/?api=1&query=Ryoan-ji+Kyoto",
         image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=400&fit=crop" },
-      { time: "13:00", title: "Treno per Osaka — 15 minuti e cambia tutto",
-        detail: "<b>Shinkansen</b> Kyoto → Shin-Osaka: <b>15 minuti</b>. Sì, quindici. Coperto dal JR Pass. Oppure treno JR locale: ~30 min, coperto dal JR Pass.<br><br>Osaka è il contrario di Kyoto. Rumorosa, diretta, mangereccia, divertente. I locali dicono <i>kuidaore</i> — mangiare fino a crollare. Ed è esattamente quello che faremo.",
-        maps: "https://www.google.com/maps/search/?api=1&query=Osaka+Station",
-        image: "https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&h=400&fit=crop" },
-      { time: "18:00", title: "Dotonbori — Lo street food più iconico del Giappone",
-        detail: "Neon giganti, insegne 3D (granchio meccanico, pufferfish, l'uomo Glico), canale illuminato, e CIBO ovunque. La regola: non prenootiamo niente. Camminiamo e mangiamo.<br><br><b>OBBLIGATORIO:</b><br>1. <i>Takoyaki</i> (polpette di polpo) — <b>Wanaka</b> o <b>Kukuru</b>, ~600 yen per 8 pezzi. Proviamo entrambi.<br>2. <i>Okonomiyaki</i> — <b>Mizuno</b> (leggendario, fila ma vale). ~1,200-1,800 yen.<br>3. <i>Kushikatsu</i> (spiedini fritti) — <b>Regola sacra:</b> NON doppio tuffo nella salsa comune. MAI. ~100-200 yen a spiedino.<br>4. <i>Gyoza</i> — cerchiamo quelli croccanti fritti.<br><br><b>Beviamo:</b> <i>Highball</i> (whisky + soda), birra alla spina, Strong Zero per le passeggiate. Foto sul <b>Ebisubashi Bridge</b> con l'uomo Glico dietro — LA foto di Osaka.<br><b>Budget:</b> ~3,000-5,000 yen a testa",
-        maps: "https://maps.app.goo.gl/WkzYeNjkH9SbghXm6",
-        image: "https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&h=400&fit=crop" }
+      { time: "13:00", title: "Arashiyama — Bambù, templi e il fiume",
+        detail: "Prendiamo il treno JR Sagano fino ad Arashiyama (~25 min da Kyoto, coperto dal JR Pass). Il quartiere più pittoresco di Kyoto.<br><br><b>Bamboo Grove:</b> il boschetto di bambù gigante — camminiamo dentro il tunnel verde. Il suono del vento tra i bambù è dichiarato 'suono da preservare' dal governo giapponese. Arriviamo prima delle 14 per le code.<br><br><b>Tenryu-ji</b> (~500 yen) — il tempio con il giardino Zen più bello del periodo Muromachi. Paesaggio curato perfetto.<br><br><b>Togetsukyo Bridge</b> — il ponte sul fiume Oi con le montagne sullo sfondo. LA foto di Arashiyama.<br><br><b>Nison-in</b> — tempio meno noto ma bellissimo, quasi senza turisti.<br><b>Tempo:</b> 3-4 ore",
+        maps: "https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove+Kyoto",
+        image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&h=400&fit=crop" },
+      { time: "19:00", title: "Pontocho Alley — Cena nel vicolo più bello di Kyoto",
+        detail: "Pontocho è un vicolo stretto 500 metri, parallelo al fiume Kamo, pieno di ristoranti tradizionali con <i>engawa</i> (terrazza sul canale). Di sera si illumina di lanterne rosse — atmosfera magica.<br><br><b>Come funziona:</b> non si prenota. Si cammina e si sceglie guardando i menu all'ingresso. Cerchiamo posti con cucina a vista e cucine locali.<br><br><b>Cosa mangiare:</b><br>• <i>Kaiseki</i> leggero — cucina Kyoto raffinata, porzioni piccole<br>• <i>Tofu ryori</i> — cucina a base di tofu, specialità kyotese<br>• <i>Yakitori</i> — spiedini di pollo alla brace<br>• <i>Obanzai</i> — piccoli piatti tradizionali Kyoto<br><br>Dopo cena: passeggiata sul Kamogawa Bridge e un ultimo drink nel quartiere Gion vicino.<br><b>Budget cena:</b> ~3,000-5,000 yen a testa",
+        maps: "https://www.google.com/maps/search/?api=1&query=Pontocho+Alley+Kyoto",
+        image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=400&fit=crop" }
     ]
   },
   {
-    day: 10, date: "28 Mar", title: "Scegliamo l'avventura: Hiroshima o Osaka chill", location: "Scelta Libera", tag: "Scelta Libera", icon: "\u{1F914}",
+    day: 10, date: "28 Mar", title: "Scegliamo l'avventura: Hiroshima o Kyoto finale", location: "Kyoto / Scelta", tag: "Scelta Libera", icon: "\u{1F914}",
     timeline: [
       { time: "07:30", title: "Opzione A — Hiroshima + Miyajima",
         detail: "Se abbiamo le energie e vogliamo un'esperienza che ci segna per la vita. Shinkansen Shin-Osaka → Hiroshima, ~1 ora 30 min (coperto dal JR Pass).<br><br><b>Hiroshima Peace Memorial Park:</b> Il 6 agosto 1945, la prima bomba atomica. Oggi il parco sorge esattamente nel punto dell'esplosione. <b>A-Bomb Dome</b> — lo scheletro sopravvissuto. Patrimonio UNESCO. <b>Peace Memorial Museum</b> (~200 yen) — racconta la storia. Preparamoci emotivamente. È duro ma essenziale. <b>Cenotafio</b> — 220,000 nomi delle vittime. <b>Fiamma della Pace</b> — brucia dal 1964, verrà spenta solo quando l'ultima arma nucleare sarà distrutta.<br><br>Come viverla: in silenzio, con rispetto. Non è turismo. È testimonianza.<br><b>Tempo:</b> 2-2.5 ore",
@@ -241,16 +241,20 @@ export const itineraryData: DayData[] = [
         detail: "<b>Pranzo:</b> <i>Hiroshima-style okonomiyaki</i> — diverso da Osaka! Qui gli strati sono separati (noodles, cavolo, uovo, maiale). Cerchiamo l'<b>Okonomimura</b> (24 ristoranti su 3 piani). ~1,000-1,500 yen.<br><br><b>Miyajima (13:30)</b> — Treno JR → Miyajimaguchi (~30 min) + traghetto JR (~10 min), tutto coperto dal JR Pass. L'isola sacra col famoso <b>torii galleggiante</b> rosso nell'acqua — una delle 3 viste più iconiche del Giappone. Alto 16 metri. Ad alta marea galleggia, a bassa marea ci camminiamo sotto. Controlliamo le maree!<br><br><b>Itsukushima Shrine</b> (~300 yen) — santuario su palafitte sull'acqua. Cervi in libertà ovunque. <i>Momiji Manju</i> — dolcetto a forma di foglia d'acero (~200 yen). Se c'è tempo: funivia sul <b>Monte Misen</b> (~1,800 yen A/R).<br><b>Rientro a Osaka:</b> ~20:00",
         maps: "https://maps.google.com/?q=Itsukushima+Shrine",
         image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&h=400&fit=crop" },
-      { time: "10:00", title: "Opzione B — Osaka chill + fun day",
-        detail: "Se dopo 10 giorni vogliamo respirare, divertirci e goderci Osaka come dei locali. Dormiamo fino a tardi. Ce lo meritiamo.<br><br><b>Brunch al Kuromon Market</b> — sashimi fresco, wagyu su stecco, frutta premium. Mangiamo con calma.<br><br><b>Osaka Castle</b> — A fine marzo è uno dei migliori spot per i primi sakura. Birra + picnic sotto i ciliegi è un'esperienza molto giapponese. Il castello è imponente dall'esterno. Interno (~600 yen) opzionale.<br><br><b>Amerikamura</b> — vintage shops, street art, sneakers, caffè cool. Il quartiere più underground di Osaka. Poi <b>Shinsaibashi</b> — shopping coperto infinito. Ultimo giro Don Quijote per souvenir. Tax-free sopra 5,000 yen (portiamo il passaporto!).<br><br><b>Sera:</b> <b>Shinsekai</b> per kushikatsu da <b>Daruma</b> + <b>Spa World</b> (opzionale, ~1,500 yen) mega onsen con zone tematiche.",
-        maps: "https://maps.google.com/?q=Kuromon+Market+Osaka",
-        image: "https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&h=400&fit=crop" }
+      { time: "10:00", title: "Opzione B — Ultima giornata Kyoto in libertà",
+        detail: "Se dopo tanti giorni intensi vogliamo respirare e goderci Kyoto con calma. Dormiamo fino a tardi. Ce lo meritiamo.<br><br><b>Nishiki Market</b> — il 'corridoio della cucina di Kyoto'. 130 bancarelle in 5 blocchi coperti: tofu fritto, mochi, yuzu, tsukemono (verdure fermentate). Mangiamo da uno stand all'altro.<br><br><b>Fushimi Inari</b> senza fretta — se non lo abbiamo già percorso tutto, torniamo. Senza le folle del mattino presto, i sentieri laterali sono quasi deserti.<br><br><b>Gion District</b> — l'ultimo giro nel quartiere delle geisha. Hanamikoji-dori la sera è bellissima. Tè da un chashitsu tradizionale (~700 yen).<br><br><b>Sera:</b> Ultima cena a Kyoto. Yakiniku nel quartiere o kaiseki più accessibile. Domani mattina check-out e si parte per Nara e poi Osaka.",
+        maps: "https://www.google.com/maps/search/?api=1&query=Nishiki+Market+Kyoto",
+        image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=400&fit=crop" }
     ]
   },
   {
-    day: 11, date: "29 Mar", title: "Nara: cervi sacri + Buddha gigante", location: "Nara / Osaka", tag: "Cervi & Templi", icon: "\u{1F98C}",
+    day: 11, date: "29 Mar", title: "Check-out Kyoto + Nara + Benvenuti a Osaka", location: "Nara / Osaka", tag: "Cervi & Templi", icon: "\u{1F98C}",
     timeline: [
-      { time: "08:30", title: "Treno per Nara — Day trip magico",
+      { time: "08:00", title: "Check-out Kyoto — Si parte per Nara e Osaka",
+        detail: "Ultimo mattino all'hotel di Kyoto. Check-out, bagagli in deposito o diretti alla stazione.<br><br><b>Kyoto → Nara:</b> Treno JR Nara Line da Kyoto Station → JR Nara, ~45 min, ~700 yen (coperto dal JR Pass). Arriviamo a Nara con le borse leggere — lasciamo i bagagli al deposito della stazione (~500 yen). Nel pomeriggio proseguiamo per Osaka.<br><br>Dedichiamo questa mattina ai cervi e poi il pomeriggio ad ambientarci a Osaka.",
+        maps: "https://www.google.com/maps/search/?api=1&query=Kyoto+Station",
+        image: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&h=400&fit=crop" },
+      { time: "09:30", title: "Treno per Nara — Day trip magico",
         detail: "Treno JR da Osaka → Nara, ~45 min, ~570 yen (coperto dal JR Pass). Nara è stata la primissima capitale del Giappone (710-784). Oggi è famosa per i <b>cervi sacri</b> che girano liberi — 1,200+ cervi tra templi e turisti.",
         maps: "https://maps.app.goo.gl/vKRuVqK8Z7VCWCCM9",
         image: "https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&h=400&fit=crop" },
@@ -262,10 +266,14 @@ export const itineraryData: DayData[] = [
         detail: "Camminiamo attraverso il parco verso <b>Kasuga Taisha</b> — il santuario con migliaia di <b>lanterne di pietra</b> coperte di muschio. Atmosfera da film Ghibli.<br><br><b>Pranzo:</b> <i>Kakinoha-zushi</i> (sushi avvolto in foglia di cachi, specialità locale) ~800-1,200 yen.<br><b>Tempo totale Nara:</b> 4-5 ore, poi torniamo a Osaka nel primo pomeriggio.",
         maps: "https://maps.app.goo.gl/FZFBV4uQfX5x3BwM9",
         image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=400&fit=crop" },
-      { time: "16:00", title: "Pomeriggio Osaka + sera tranquilla",
-        detail: "<b>Pomeriggio opzioni:</b><br>• <b>Kuromon Market</b> — sashimi fresco, wagyu su stecco (~1,000 yen), frutta premium<br>• <b>Amerikamura</b> — quartiere hip, vintage shops, street art<br>• <b>Osaka Castle</b> — il parco è bello e gratis, ottimo per sakura<br><br><b>Sera:</b> Dopo Nara e un pomeriggio in giro, serata tranquilla. Domani c'è USJ che richiede energie. Ceniamo in un ramen shop di quartiere e a letto presto. Chi propone di uscire viene ignorato.",
-        maps: "https://maps.google.com/?q=Osaka+Castle",
-        image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&h=400&fit=crop" }
+      { time: "15:30", title: "Nara → Osaka — 45 minuti e cambia tutto",
+        detail: "Treno JR da Nara → Osaka (Namba o Tennoji), ~45 min, coperto dal JR Pass. Check-in all'hotel di Osaka.<br><br>Osaka è il contrario di Kyoto. Rumorosa, diretta, mangereccia, divertente. I locali dicono <i>kuidaore</i> — mangiare fino a crollare. Esatto quello che faremo.",
+        maps: "https://www.google.com/maps/search/?api=1&query=Namba+Osaka",
+        image: "https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&h=400&fit=crop" },
+      { time: "19:00", title: "Dotonbori — Benvenuti a Osaka",
+        detail: "Neon giganti, insegne 3D (granchio meccanico, pufferfish, l'uomo Glico), canale illuminato, e CIBO ovunque. La regola: non prenotiamo niente. Camminiamo e mangiamo.<br><br><b>OBBLIGATORIO:</b><br>1. <i>Takoyaki</i> (polpette di polpo) — <b>Wanaka</b> o <b>Kukuru</b>, ~600 yen per 8 pezzi. Proviamo entrambi.<br>2. <i>Okonomiyaki</i> — <b>Mizuno</b> (leggendario, fila ma vale). ~1,200-1,800 yen.<br>3. <i>Kushikatsu</i> (spiedini fritti) — <b>Regola sacra:</b> NON doppio tuffo nella salsa comune. MAI. ~100-200 yen a spiedino.<br><br>Foto sul <b>Ebisubashi Bridge</b> con l'uomo Glico dietro — LA foto di Osaka. Serata tranquilla: domani c'è USJ e servono energie.<br><b>Budget:</b> ~3,000-4,000 yen a testa",
+        maps: "https://maps.app.goo.gl/WkzYeNjkH9SbghXm6",
+        image: "https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&h=400&fit=crop" }
     ]
   },
   {
@@ -305,20 +313,37 @@ export const itineraryData: DayData[] = [
         maps: "https://maps.google.com/?q=Umeda+Sky+Building",
         image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&h=400&fit=crop" },
       { time: "20:00", title: "L'ultima sera — Chiudiamo in grande",
-        detail: "L'ultima sera del viaggio. Chiudiamo in grande.<br><br>1. <b>Cena:</b> <i>Yakiniku</i> (BBQ giapponese) — cuciniamo noi la carne wagyu sulla griglia. ~3,000-5,000 yen. Oppure ultimo round di street food a Dotonbori.<br>2. <b>Hozenji Yokocho</b> — vicolo nascosto con tempietto e ristorantini tradizionali. Atmosfera intima, perfetta per l'ultima sera.<br>3. <b>Bar hopping Namba/Shinsaibashi:</b> <i>Bar Nayuta</i> (cocktail creativi) + vicoli laterali pieni di bar nascosti.<br>4. <b>Late night:</b> konbini run finale — Strong Zero, onigiri, passeggiata sul canale di Dotonbori illuminato.<br><br><b>Brindisi finale: siamo 3 amici che hanno appena vissuto 14 giorni in Giappone. Questo è un ricordo per la vita.</b>",
+        detail: "L'ultima sera del viaggio. Chiudiamo in grande.<br><br>1. <b>Cena:</b> <i>Yakiniku</i> (BBQ giapponese) — cuciniamo noi la carne wagyu sulla griglia. ~3,000-5,000 yen. Oppure ultimo round di street food a Dotonbori.<br>2. <b>Hozenji Yokocho</b> — vicolo nascosto con tempietto e ristorantini tradizionali. Atmosfera intima, perfetta per l'ultima sera.<br>3. <b>Bar hopping Namba/Shinsaibashi:</b> <i>Bar Nayuta</i> (cocktail creativi) + vicoli laterali pieni di bar nascosti.<br>4. <b>Late night:</b> konbini run finale — Strong Zero, onigiri, passeggiata sul canale di Dotonbori illuminato.<br><br><b>Brindisi finale: siamo 3 amici che hanno appena vissuto 15 giorni in Giappone. Questo è un ricordo per la vita.</b>",
         maps: "https://maps.app.goo.gl/WkzYeNjkH9SbghXm6",
         image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&h=400&fit=crop" }
     ]
   },
   {
-    day: 14, date: "1 Apr", title: "Partenza — Ultimi acquisti e arrivederci", location: "Osaka \u2192 KIX", tag: "Partenza", icon: "\u2708\uFE0F",
+    day: 14, date: "1 Apr", title: "Ultimo giorno a Osaka — libertà totale", location: "Osaka", tag: "Gran Finale", icon: "\u{1F338}",
+    timeline: [
+      { time: "10:00", title: "Mattinata libera — Respiriamo Osaka",
+        detail: "Ultimo giorno pieno. Nessun programma fisso. Facciamo quello che ci è piaciuto di più.<br><br><b>Idee:</b><br>• Tornare a Dotonbori per street food di mattina — i banchi di <i>takoyaki</i> freschi sono al top<br>• <b>Shinsekai</b> ancora, con più calma — il quartiere vintage di Osaka è più bello di giorno<br>• <b>Nakanoshima Park</b> — isola verde nel mezzo della città. Fine marzo = primi sakura. Birra e picnic sotto i ciliegi.<br>• <i>Kissaten</i> (caffè vecchio stile) per una colazione lenta con toast giapponese spesso e uova<br><br><b>Shopping finale:</b> Don Quijote Dotonbori per tutto ciò che non abbiamo ancora preso. Kit-Kat assurdi, cosmetici giapponesi, gadget. Tax-free sopra 5,000 yen.",
+        maps: "https://maps.google.com/?q=Nakanoshima+Park+Osaka",
+        image: "https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&h=400&fit=crop" },
+      { time: "14:00", title: "Pomeriggio — Umeda Sky Building o ultima passeggiata",
+        detail: "<b>Umeda Sky Building</b> (~1,500 yen) — due torri collegate da un anello sospeso a 173 metri. Vista al pomeriggio su tutta Osaka. Meno affollato di sera.<br><br>Oppure: nessun programma. Sediamoci in un parco, beviamo una birra, guardiamo passare la gente. Siamo in Giappone, è l'ultimo pomeriggio. Non c'è niente da 'fare'.",
+        maps: "https://maps.google.com/?q=Umeda+Sky+Building",
+        image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&h=400&fit=crop" },
+      { time: "20:00", title: "Ultima cena — Chiudiamo il cerchio",
+        detail: "L'ultima cena del viaggio. Chiudiamola bene.<br><br>• <b>Yakiniku</b> (BBQ giapponese) — cuciniamo noi la carne wagyu sulla griglia. ~3,000-5,000 yen.<br>• Oppure: <b>Hozenji Yokocho</b> — vicolo nascosto con tempietto e ristorantini tradizionali. Atmosfera perfetta per l'ultima sera.<br>• <b>Bar hopping Namba:</b> 2-3 bar piccoli nascosti nei vicoli.<br><br><b>Konbini run di mezzanotte</b> — Strong Zero, onigiri, passeggiata sul canale di Dotonbori illuminato.<br><br>Domani mattina si parte per KIX. Ma stasera siamo ancora qui.",
+        maps: "https://maps.app.goo.gl/WkzYeNjkH9SbghXm6",
+        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&h=400&fit=crop" }
+    ]
+  },
+  {
+    day: 15, date: "2 Apr", title: "Partenza — Ultimi acquisti e arrivederci", location: "Osaka \u2192 KIX", tag: "Partenza", icon: "\u2708\uFE0F",
     timeline: [
       { time: "09:00", title: "Ultimi acquisti + checkout",
         detail: "Ultimo giro al konbini per snack da portare in aereo. Facciamo checkout e andiamo verso l'aeroporto con calma.<br><br><b>Da Osaka/Namba:</b> Treno <b>Nankai Rapit</b> → KIX, ~38 min, ~1,450 yen (treno futuristico, molto figo). Oppure: JR Haruka → KIX, ~50 min (coperto da JR Pass se ancora attivo).<br><br>Arriviamo <b>3 ore prima</b> del volo per shopping duty-free.",
         maps: "https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport",
         image: "https://images.unsplash.com/photo-1590253230532-a67f6bc61c9e?w=800&h=400&fit=crop" },
       { time: "11:00", title: "Shopping duty-free — L'ultimo colpo",
-        detail: "<b>Cosa comprare all'ultimo:</b><br>• <i>Kit-Kat</i> gusti esclusivi (matcha, sake, strawberry cheesecake, ume)<br>• <i>Sake</i> — una bottiglia buona costa ~2,000-5,000 yen<br>• <i>Whisky giapponese</i> — Suntory, Nikka. Se troviamo qualcosa di buono, prendiamolo. In Italia costano il triplo<br>• <i>Snack dal konbini</i> — Tokyo Banana, Royce chocolate, castagne dolci<br>• <i>Ceramica</i> — se abbiamo comprato qualcosa a Kyoto, imballiamola bene<br><br>Ultimo sguardo al Giappone dal finestrino. 14 giorni, 3 amici, zero rimpianti. Un paio di chili in più, un buco nel conto in banca. Non importa. Ci torneremo. È una promessa tra uomini. Non stiamo piangendo, è il jetlag.",
+        detail: "<b>Cosa comprare all'ultimo:</b><br>• <i>Kit-Kat</i> gusti esclusivi (matcha, sake, strawberry cheesecake, ume)<br>• <i>Sake</i> — una bottiglia buona costa ~2,000-5,000 yen<br>• <i>Whisky giapponese</i> — Suntory, Nikka. Se troviamo qualcosa di buono, prendiamolo. In Italia costano il triplo<br>• <i>Snack dal konbini</i> — Tokyo Banana, Royce chocolate, castagne dolci<br>• <i>Ceramica</i> — se abbiamo comprato qualcosa a Kyoto, imballiamola bene<br><br>Ultimo sguardo al Giappone dal finestrino. 15 giorni, 3 amici, zero rimpianti. Un paio di chili in più, un buco nel conto in banca. Non importa. Ci torneremo. È una promessa tra uomini. Non stiamo piangendo, è il jetlag.",
         maps: "https://www.google.com/maps/search/?api=1&query=KIX+Duty+Free",
         image: "/itinerary/airport-last-call.svg" }
     ]
@@ -443,7 +468,7 @@ export const bonusExperiences: BonusExperience[] = [
 export const tasksData: TaskData[] = [
   { id: 1, title: "Ryokan Hakone (la notte premium)", timeline: "Prima cosa da bloccare. 60+ giorni prima. Cerchiamo ryokan con kashikiri (bagno privato).", icon: "\u{1F3E8}" },
   { id: 2, title: "teamLab Planets (slot obbligatorio)", timeline: "45 giorni prima su teamlabplanets.dmm.com. Si esauriscono subito.", icon: "\u{1F4A1}" },
-  { id: 3, title: "Shibuya Sky (prenotazione online)", timeline: "30 giorni prima su shibuya-sky.com. Slot 16:30-17:00 per il tramonto. ~2,000 yen.", icon: "\u{1F3D9}\uFE0F" },
+  { id: 3, title: "Shibuya Sky (prenotazione online)", timeline: "30 giorni prima su shibuya-sky.com. Slot 18:00 del 23 Mar (prenotato). ~2,000 yen.", icon: "\u{1F3D9}\uFE0F" },
   { id: 4, title: "Bar BenFiddich (prenotazione)", timeline: "Settimane prima via TableCheck. Solo 15 posti. Slot 21:00-22:50 consigliato.", icon: "\u{1F378}" },
   { id: 5, title: "USJ + Express Pass (online!)", timeline: "45 giorni prima su usj.co.jp. Vendita on-site CHIUSA. Senza biglietto online piangiamo.", icon: "\u{1F3AB}" },
   { id: 6, title: "Sushi Omakase (Tokyo)", timeline: "2-3 settimane prima. Chiediamo al nostro hotel di prenotare per noi.", icon: "\u{1F363}" },
