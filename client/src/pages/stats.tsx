@@ -158,7 +158,7 @@ export default function Stats() {
             I Numeri del <span className="text-primary">Delirio</span>
           </h1>
           <p className="mt-1 text-sm text-muted-foreground sm:text-base" data-testid="text-stats-subtitle">
-            14 giorni, 7 tappe, un milione di passi. Chi molla paga da bere.
+            15 giorni, 7 tappe, un milione di passi. Chi molla paga da bere.
           </p>
         </div>
       </header>
