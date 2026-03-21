@@ -146,6 +146,13 @@ export const itineraryChoiceMap: Record<string, ItineraryChoiceInfo> = {
     "https://www.google.com/maps/search/?api=1&query=Tokyo+Station+Food+Hall",
     "Aggiornato Feb 2026: piano B pragmatico, spesso migliore del forzare Kegon con meteo brutto o poca energia residua.",
   ),
+  "d4-4": alt(
+    "Aggiornato Feb 2026: Omoide Yokocho e Golden Gai restano attivi e affollati, meglio arrivare entro le 20 per trovare posto a sedere nello yokocho.",
+    "Nonbei Yokocho + Shibuya night",
+    "Se Golden Gai vi sembra troppo turistico, spostatevi su <b>Nonbei Yokocho</b> a Shibuya: stessi micro-bar vecchia scuola ma meno caotico, poi esplorate la Shibuya notturna.",
+    "https://www.google.com/maps/search/?api=1&query=Nonbei+Yokocho+Shibuya",
+    "Aggiornato Feb 2026: alternativa solida se volete la stessa atmosfera yokocho ma con meno folla e piu locals.",
+  ),
   "d5-0": alt(
     "Aggiornato Feb 2026: Ameyoko resta vivissimo e caotico, ma alcuni banchi cambiano in fretta e la qualita e discontinua.",
     "Kappabashi + Ueno stroll",
